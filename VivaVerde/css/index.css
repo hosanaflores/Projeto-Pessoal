@@ -1,0 +1,383 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+} /*Tirando toda formatação base*/
+
+html, body{ /*formatando todo hmtl e body*/
+    height: 100%;
+    font-family: poppins;
+}
+
+#header { 
+    height: 99%;
+}
+
+nav h1 a{ /*Retirando o underline e colocando cor no meu LOGO do header*/
+    text-decoration: none;
+    color: white;
+}
+
+nav{ /*Arrumando meu Header*/
+    background-color: #4DAF00;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 12%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+nav ul{ /*Para ficar flexível, lado a lado*/
+    display: flex;
+    list-style: none;
+}
+
+nav ul li { /*dando espaçamento entre as li*/
+    margin: 0 40px;
+}
+
+li{ /*deixando bonita as li*/
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+nav ul li a { /*Retirando meu underlino dos links da navbar e dando cor*/
+    text-decoration: none;
+    justify-content: space-evenly;
+    display: flex;
+    color: white;
+}
+
+.banner{ /*Foto de fundo da home*/
+    background-image: url("../imagens/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .container p{ /*Paragráfo da home*/
+    color: #4DAF00;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.container-botao{ /*Para centralizar o botão preciso contralizar o container dele*/
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+}
+
+.botao-quiz{ /*Deixando botão teste bonito*/
+    border-radius: 5px;
+    width: fit-content;
+    height: 35px;
+    background-color: #4DAF00;
+    border: none;
+    color: white;
+    text-transform: lowercase;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.container-botao .botao-quiz{ /*Usando position absolute para deixar o botão na foto da home*/
+   position: absolute;
+   top: 85%;
+}
+
+/*INICIO DO VEGANISMO X VEGETARIANISMO*/
+
+/* .imagem-veganismo{
+    background-image: url("../imagens/LinhaTop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+} */
+
+.container-vv{
+    margin-top: 100px;
+    display: flex;
+}
+
+.title-veganismo{
+    color: #4DAF00;
+    font-size: 30px;
+    margin-left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragrafo-veganismo{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 15%;
+}
+
+.imagem-veganismo{
+    background-image: url("../imagens/vegetarian.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+    width: 40vw;
+    border-radius: 15px;
+    display: flex;
+    margin-left: 15%;
+    margin-top: 25px;
+}
+
+.imagem-vegetarianismo{
+    background-image: url("../imagens/vegan.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+    width: 40vw;
+    border-radius: 15px;
+    display: flex;
+    margin-right: 15%;
+    margin-top: 25px;
+}
+
+.title-vegetarianismo{
+    color: #4DAF00;
+    font-size: 30px;
+    margin-right: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragrafo-vegetarianismo{
+    display: flex;
+    margin-top: 50px;
+    margin-right: 15%;
+}
+
+/*TIPOS DE VEGETARIANOS*/
+.title-tipos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    color: #4DAF00;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.tipos-vegetarianos{
+    background-color: #8cc163;
+    width: 90vw;
+    height: 70vh;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 25px;
+    border-radius: 15px;
+    justify-content: space-around;
+  
+}
+
+.ovolactovegetarianismo{
+    background-image: url("../imagens/pexels-tara-winstead-6489663.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20vh;
+    width: 10vw;
+    border-radius: 100px;
+    display: flex;
+    margin-top: 25px;
+    /* top: 1708px;
+    position: absolute; */
+}
+
+.paragrafo-1, 
+.paragrafo-2,
+.paragrafo-3,
+.paragrafo-4,
+.paragrafo-5{
+    margin-top: 175px;
+}
+
+.ovovegetarianismo {
+    background-image: url("../imagens/pexels-any-lane-5945646.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20vh;
+    width: 10vw;
+    border-radius: 100px;
+    display: flex;
+    margin-top: 25px;
+}
+
+.plantbased-meio{
+    background-image: url("../imagens/pexels-ksenia-chernaya-4048705.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20vh;
+    width: 10vw;
+    border-radius: 100px;
+    display: flex;
+    margin-top: 25px;
+}
+
+.vegetarianismo-restrito{
+    background-image: url("../imagens/pexels-polina-tankilevitch-4443482.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20vh;
+    width: 10vw;
+    border-radius: 100px;
+    display: flex;
+    margin-top: 25px;
+}
+
+.vegetarianismo-restrito{
+    background-image: url("../imagens/pexels-polina-tankilevitch-4443482.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20vh;
+    width: 10vw;
+    border-radius: 100px;
+    display: flex;
+    margin-top: 25px;
+}
+
+.lactovegetarianismo{
+    background-image: url("../imagens/pexels-lisa-fotios-4497672.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20vh;
+    width: 10vw;
+    border-radius: 100px;
+    display: flex;
+    margin-top: 25px;
+
+}
+
+/*IMAGENS SOBREPOSTAS*/
+.sobrepostas-container{
+    display: flex;
+    margin-bottom: 400px;
+    width: 50vw;
+}
+
+.sobrepor-1{
+    background-image: url("../imagens/mesa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    width: 20vw;
+    border-radius: 15px;
+    display: flex;
+    margin-top: 150px;
+    margin-left: 4vw;
+}
+
+.sobrepor-2{
+    background-image: url("../imagens/suco.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    width: 20vw;
+    border-radius: 15px;
+    display: flex;
+    margin-left: 325px;
+    position: absolute;
+    top: 2500px;
+}
+
+.sobrepor-3{
+    background-image: url("../imagens/preparo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    width: 20vw;
+    border-radius: 15px;
+    display: flex;
+    margin-left: 100px;
+    position: absolute;
+    top: 2625px;
+}
+
+/*SOBRE MIM*/
+.container-eu{
+    display: flex;
+    width: 40vw;
+    height: 75vh;
+    background-color: #4DAF00;  
+}
+
+.container-eu, .sobre-mim{
+    display: flex;
+    float: right;
+    margin-right: 4vw;
+}
+
+/*FOOTER*/
+.footer{
+    background-color: #4DAF00;
+    display: flex;
+    bottom: 0;
+    height: 25vh;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.esquerda, .centro, .direita{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+}
+
+
+/* .esquerda{
+    justify-content: flex-start;
+}
+
+.centro {
+    justify-content: center;
+}
+
+.direita{
+    justify-content: flex-end;
+} */
+
+
+/* .vegetarianismo-texto{ aqui é para deixar a imagem do vegan x vegetarian igual do figma
+    margin-top: 50%;
+} */
+
+/* 
+.vegetarianismo-texto{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+}
+
+.paragrafo-vegetarianismo p{
+    display: flex;
+    margin-right: 25%;
+} */
+
+/* .vegetarianismo-texto{
+    display: flex;
+    margin-top: 250px;
+    padding: 75px;
+} */
+
+/* .vegetarianismo-texto{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 500px;
+} */
+
