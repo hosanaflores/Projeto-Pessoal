@@ -1,13 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 } /*Tirando toda formatação base*/
 
+html{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-padding-top: 14%;
+}
 html, body{ /*formatando todo hmtl e body*/
     height: 100%;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
 }
+
+/*BARRA DE ROLAGEM DO NAVEGADOR*/
+::-webkit-scrollbar-track {
+    background-color: #4DAF00;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #EDEDED;
+}
+/*BARRA DE ROLAGEM DO NAVEGADOR*/
 
 #header { 
     height: 99%;
@@ -91,16 +109,6 @@ nav ul li a { /*Retirando meu underlino dos links da navbar e dando cor*/
    top: 85%;
 }
 
-/*INICIO DO VEGANISMO X VEGETARIANISMO*/
-
-/* .imagem-veganismo{
-    background-image: url("../imagens/LinhaTop.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-end;
-} */
-
 .container-vv{
     margin-top: 100px;
     display: flex;
@@ -125,7 +133,7 @@ nav ul li a { /*Retirando meu underlino dos links da navbar e dando cor*/
     background-image: url("../imagens/vegetarian.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 75vh;
+    height: 60vh;
     width: 40vw;
     border-radius: 15px;
     display: flex;
@@ -137,7 +145,7 @@ nav ul li a { /*Retirando meu underlino dos links da navbar e dando cor*/
     background-image: url("../imagens/vegan.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 75vh;
+    height: 60vh;
     width: 40vw;
     border-radius: 15px;
     display: flex;
@@ -176,147 +184,149 @@ nav ul li a { /*Retirando meu underlino dos links da navbar e dando cor*/
     width: 90vw;
     height: 70vh;
     display: flex;
-    margin: 0 auto;
+    margin: auto;
     margin-top: 25px;
     border-radius: 15px;
-    justify-content: space-around;
-  
+    justify-content: space-evenly;
 }
 
-.ovolactovegetarianismo{
-    background-image: url("../imagens/pexels-tara-winstead-6489663.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 20vh;
-    width: 10vw;
-    border-radius: 100px;
-    display: flex;
-    margin-top: 25px;
-    /* top: 1708px;
-    position: absolute; */
-}
-
-.paragrafo-1, 
-.paragrafo-2,
-.paragrafo-3,
-.paragrafo-4,
-.paragrafo-5{
-    margin-top: 175px;
-}
-
-.ovovegetarianismo {
-    background-image: url("../imagens/pexels-any-lane-5945646.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 20vh;
-    width: 10vw;
-    border-radius: 100px;
-    display: flex;
+.paragrafo-1, .paragrafo-2,
+.paragrafo-3,.paragrafo-4, .paragrafo-5{
+    text-align: center;
+    font-size: 14px;
+    width: 200px;
     margin-top: 25px;
 }
-
-.plantbased-meio{
-    background-image: url("../imagens/pexels-ksenia-chernaya-4048705.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 20vh;
-    width: 10vw;
+.fotos-tipos{
     border-radius: 100px;
-    display: flex;
     margin-top: 25px;
-}
-
-.vegetarianismo-restrito{
-    background-image: url("../imagens/pexels-polina-tankilevitch-4443482.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 20vh;
-    width: 10vw;
-    border-radius: 100px;
     display: flex;
-    margin-top: 25px;
+    flex-direction: column;
+    align-items: center;
 }
-
-.vegetarianismo-restrito{
-    background-image: url("../imagens/pexels-polina-tankilevitch-4443482.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 20vh;
-    width: 10vw;
-    border-radius: 100px;
-    display: flex;
-    margin-top: 25px;
-}
-
-.lactovegetarianismo{
-    background-image: url("../imagens/pexels-lisa-fotios-4497672.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 20vh;
-    width: 10vw;
-    border-radius: 100px;
-    display: flex;
-    margin-top: 25px;
-
-}
-
-/*IMAGENS SOBREPOSTAS*/
-.sobrepostas-container{
-    display: flex;
-    margin-bottom: 400px;
-    width: 50vw;
-}
-
-.sobrepor-1{
-    background-image: url("../imagens/mesa.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 40vh;
-    width: 20vw;
-    border-radius: 15px;
-    display: flex;
-    margin-top: 150px;
-    margin-left: 4vw;
-}
-
-.sobrepor-2{
-    background-image: url("../imagens/suco.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 40vh;
-    width: 20vw;
-    border-radius: 15px;
-    display: flex;
-    margin-left: 325px;
-    position: absolute;
-    top: 2500px;
-}
-
-.sobrepor-3{
-    background-image: url("../imagens/preparo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 40vh;
-    width: 20vw;
-    border-radius: 15px;
-    display: flex;
-    margin-left: 100px;
-    position: absolute;
-    top: 2625px;
+.fotos-tipos img{
+    border-radius: 200px;
+    height: 100px;
+    width: 100px;
+    object-fit: cover; /*object-fit como ele irá colocar a imagem em relação a width e height do elemento. Cover = preenche tudo */
+    border: white solid 1px;
 }
 
 /*SOBRE MIM*/
+.title-servico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    color: #4DAF00;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.area-sobre-mim{
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagens-sobrepostas img{
+    margin-left: 4vw;
+    margin-top: 100px;
+    width: 30vw;
+}
+
 .container-eu{
     display: flex;
     width: 40vw;
-    height: 75vh;
-    background-color: #4DAF00;  
+    height: 55vh;
+    background-color: #ffffff; 
+    justify-content: center; 
+    margin-top: 100px;
+    border-radius: 15px;
+    margin-right: 4vw;
+    border: #4DAF00 solid 1px;
 }
 
-.container-eu, .sobre-mim{
+.container-eu .sobre-mim {
     display: flex;
-    float: right;
-    margin-right: 4vw;
+    justify-content: center;
+    align-items: center; /*TEXTO ALINHADO AO MEIO DO CARD*/
+    padding: 0 25px 0 25px;
+}
+
+/*ÁREA CARDÁPIO*/
+.area-cardapio{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+}
+
+.cardapio-escrita{
+    width: 50%;
+    background-color: #EDEDED;
+    height: 70vh;
+}
+
+.especialidades{
+    text-transform: uppercase;
+    color: #4DAF00;
+    font-size: 15px;
+    display: block;
+    margin-top: 15px;
+}
+
+.cardapio-viva-verde{
+    text-transform: uppercase;
+    color: #4DAF00;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.valor{
+    color: #4DAF00;
+}
+
+.imagem-cardapio{
+    width: 50%;  
+    background: url("../imagens/cardapioCafe.jpg") center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    width: 50vw;
+}
+
+.imagem-cardapio img{
+    width: 100%;
+    height: 70vh;
+}
+
+.conteudo {
+    margin-top: 25px;
+}
+
+.conteudo img{
+    padding: 0 25px 0 25px;
+}
+
+.especialidades, .cardapio-viva-verde, .conteudo{
+    margin-left: 25px;
+}
+
+.botaoCardapio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btnCardapioComp{
+    background-color: #8cc163;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
 }
 
 /*FOOTER*/
@@ -331,53 +341,36 @@ nav ul li a { /*Retirando meu underlino dos links da navbar e dando cor*/
     margin-top: 100px;
 }
 
-.esquerda, .centro, .direita{
+.esquerda, .direita{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 33%;
+    color: white;
+}
+
+.direita p, .esquerda p{
+    padding: 15px 0 0 0;
+    cursor: pointer;
 }
 
 
-/* .esquerda{
-    justify-content: flex-start;
+.centro .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+   
 }
 
-.centro {
-    justify-content: center;
+.centro img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
 }
 
-.direita{
-    justify-content: flex-end;
-} */
-
-
-/* .vegetarianismo-texto{ aqui é para deixar a imagem do vegan x vegetarian igual do figma
-    margin-top: 50%;
-} */
-
-/* 
-.vegetarianismo-texto{
+.icons{
     display: flex;
-    justify-content: flex-end;
-    position: relative;
-
+    justify-content: space-between;
+    margin-top: 25px;
 }
-
-.paragrafo-vegetarianismo p{
-    display: flex;
-    margin-right: 25%;
-} */
-
-/* .vegetarianismo-texto{
-    display: flex;
-    margin-top: 250px;
-    padding: 75px;
-} */
-
-/* .vegetarianismo-texto{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 500px;
-} */
-
