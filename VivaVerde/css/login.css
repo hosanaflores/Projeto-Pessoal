@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} /*Tirando toda formatação base*/
+
+html, body{ /*formatando todo hmtl e body*/
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url("../imagens/linhas1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.container-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    animation: trocaDeTela 1s ease; /*fazer a animação funcionar... o ease é o jeito que a animação aparece*/
+    /* border: #4DAF00 solid 2px; */
+}
+
+.formulario-login{
+    background-color: #4DAF00;
+    width: 30%;
+    height: 70%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.422);
+}
+
+span{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+label{
+    color: white;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem; /*equivale a 16px*/
+}
+
+.btnLogar{
+    display: block;
+    margin-top: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out;
+    height: 30px;
+}
+
+.btnLogar:hover{
+    background-color: rgb(196, 255, 196);
+}
+
+input{
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    width: 250px;
+    display: block;
+    margin-top: 8px;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.container-imagem{
+   display: flex;
+   flex-direction: column;
+   height: 70%;
+   width: 30%;
+   background-color: #EDEDED;
+   border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+   justify-content: center;
+    align-items: center;
+    /* margin-left: 25px; */
+    border: #4DAF00 solid 2px;
+}
+
+.container-imagem img{
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+}
+
+p{
+    color: #4DAF00;
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: #193a00d5;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out;
+    font-weight: bold;
+}
+
+a:hover{
+    color: black;
+}
+
+
+@keyframes trocaDeTela { /*nome do meu keyframes*/
+    0% {  /*ta começando do 0*/
+        transform: translateX(-120px); /*ele move o container pra esquerda*/
+        opacity: 0; /*começa transparente */
+    }
+    100% { /*Até onde quero que vá*/
+        transform: translateX(0); /*move o container até a posição original dele*/
+        opacity: 1; /*fica vísivel*/
+    }
+
+}

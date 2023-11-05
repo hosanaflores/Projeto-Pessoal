@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Restaurantes</title>
+
+    <link rel="stylesheet" href="../css/cadastro.css">
+
+</head>
+<body>
+    
+    
+    <div class="container-cadastro">
+        <div class="formulario-cadastro">
+            
+           <span>Cadastro de Restaurantes</span>
+           <form action="#" method="#">
+               <!--Campo de CNPJ-->
+
+            <div class="campo">
+                <label for="cnpj">CNPJ</label>
+                <input type="text" id="cnpj" name="cnpj" placeholder="CNPJ" required>
+            </div>
+            
+            <!-- Campo de Nome -->
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome do seu restaurante" required>
+            </div>
+
+            <!-- Campo de Email -->
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+            </div class="campo">
+
+            <!-- Campo de Senha -->
+            <div class="campo">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            </div>
+
+            <!--Campo de confirmação de senha-->
+            <div class="campo">
+                <label for="confirmarSenha">Confirmar senha</label>
+                <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirme sua senha" required>
+            </div>
+
+            <!-- Botão de Envio -->
+            <div class="campo">
+                <input type="submit" value="Cadastrar" class="btnCadastrar">
+            </div>
+            </form>
+        </div>
+
+        <div class="container-imagem">
+            <a href="../index.html"><img src="../imagens/fundoFinal.png"></a>
+            <p>Após realizar o seu cadastro, faça o seu Login</p>
+            <a class="login" href="../login/login.html">Login</a>
+        </div>
+        
+    </div> 
+
+</body>
+</html>
