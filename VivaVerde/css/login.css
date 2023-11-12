@@ -24,20 +24,16 @@ body{
     align-items: center;
     height: 100%;
     animation: trocaDeTela 1s ease; /*fazer a animação funcionar... o ease é o jeito que a animação aparece*/
-    /* border: #4DAF00 solid 2px; */
+    /* border: darkgreen solid 2px; */
 }
 
 .formulario-login{
-    background-color: #4DAF00;
-    width: 30%;
-    height: 70%;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;  
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.422);
+    height: 100%;
+    position: relative;
 }
 
 span{
@@ -69,7 +65,7 @@ label{
     background-color: rgb(196, 255, 196);
 }
 
-input{
+button, input{
     border-radius: 5px;
     border: none;
     height: 25px;
@@ -78,6 +74,10 @@ input{
     margin-top: 8px;
     justify-content: space-between;
     padding-left: 10px;
+}
+
+button{
+    margin-bottom: 25px; /*Para dar distância da mensagem de validação do button*/
 }
 
 input:focus{
@@ -95,7 +95,7 @@ input:focus{
    justify-content: center;
     align-items: center;
     /* margin-left: 25px; */
-    border: #4DAF00 solid 2px;
+    border: darkgreen solid 2px;
 }
 
 .container-imagem img{
@@ -105,7 +105,7 @@ input:focus{
 }
 
 p{
-    color: #4DAF00;
+    color: darkgreen;
     font-size: 20px;
     width: 300px;
     text-align: center;
@@ -135,4 +135,38 @@ a:hover{
         opacity: 1; /*fica vísivel*/
     }
 
+}
+
+
+/*CSS DA VALIDAÇÃO*/
+.success{
+    font-size: 15px;
+    color: white;
+}
+
+.error{
+    font-size: 15px;
+    color: black;
+}
+
+.background-login{
+    background-color: darkgreen;
+    width: 30%;
+    height: 70%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.422);
+    position: relative;
+}
+
+#div_mensagem{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

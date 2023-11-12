@@ -31,7 +31,7 @@
         </div>
 
         <div class="container-botao">
-            <button class="botao-quiz">Veja os restaurantes</button>
+            <button class="botao-quiz" onclick="abrirAbaGoogle()">Veja os restaurantes</button>
         </div>
     </header>
 
@@ -197,7 +197,7 @@
             </div>
 
             <div class="botaoCardapio">
-                <button class="btnCardapioComp">Ver cardápio completo</button>
+                <button onclick="abrirAbaGoogle()"class="btnCardapioComp">Ver cardápio completo</button>
             </div>
 
         </div>
@@ -232,3 +232,9 @@
 
 </body>
 </html>
+
+<script>
+    function abrirAbaGoogle() {
+        window.open('file:///D:/SPTECH/1-Semestre/ProjetoPessoal/VivaVerde/restaurantes/restaurantes.html', '_blank');
+    }
+</script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurantes</title>
+    <link rel="stylesheet" href="../css/restaurantes.css">
+</head>
+<body>
+
+    <div class="banner" id="banner">
+        <div class="container">
+            <p>Restaurantes Vegetarianos e Veganos</p>
+        </div>
+    </div>
+
+    <div class="container-botao">
+        <a href="#rolagem" class="botao-restaurante">Veja</a>
+    </div>
+
+    
+    <h2 id="rolagem">Restaurantes</h2>
+
+<div class="engloba-todas">
+
+    <div class="container-card">
+        <div class="conteudo-card">
+            <div class="titulo-endereco">
+                <span class="titulo">1 Card</span>
+                <span class="endereco">Rua de Vegetal de Brocólis</span>
+            </div>
+
+        </div>
+            <button  onclick="verCardapio()" class="botao-estilo">Veja Cardápio</button>
+        </div>
+
+
+    <div class="container-card">
+        <div class="conteudo-card">
+            <div class="titulo-endereco">
+                <span class="titulo">2 Card</span>
+                <span class="endereco">Rua de Vegetal de Brocólis</span>
+            </div>
+
+        </div>
+            <button  onclick="verCardapio()" class="botao-estilo">Veja Cardápio</button>
+        </div>
+
+
+    <div class="container-card">
+        <div class="conteudo-card">
+            <div class="titulo-endereco">
+                <span class="titulo">3 card</span>
+                <span class="endereco">Rua de Vegetal de Brocólis</span>
+            </div>
+
+        </div>
+            <button onclick="verCardapio()" class="botao-estilo">Veja Cardápio</button>
+        </div>
+
+        <!-- Modal -->
+        <div id="meuModal" class="modal">
+            <div class="conteudo-modal">
+                <p>CARDÁPIO TAL DE TAL</p>
+                <button onclick="fecharCardapio()" class="botao-modal">X</button>
+            </div>
+        </div>
+</div>
+
+<div class="container-botao2">
+    <a href="#banner" class ="botao-restaurante2">Início</a>
+</div>
+    
+</body>
+</html>
+
+<script src="../js/restaurante-modal.js"></script>

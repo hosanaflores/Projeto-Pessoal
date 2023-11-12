@@ -15,22 +15,25 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container-cadastro{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 80%;
+    width: 100%;
     animation: trocaDeTela 1s ease;
-    /* border: #4DAF00 solid 2px; */
+    /* border: darkgreen solid 2px; */
 }
 
 .formulario-cadastro{
-    background-color: #4DAF00;
-    width: 30%;
-    height: 70%;
+    background-color: darkgreen;
+    width: 40%;
+    height: 99%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;  
     display: flex;
@@ -80,6 +83,11 @@ input{
     padding-left: 10px;
 }
 
+button{
+    border-radius: 5px;
+    width: 100px;
+}
+
 input:focus{
     outline: none;
 }
@@ -87,15 +95,15 @@ input:focus{
 .container-imagem{
    display: flex;
    flex-direction: column;
-   height: 70%;
-   width: 30%;
+   height: 99%;
+   width: 40%;
    background-color: #EDEDED;
    border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
    justify-content: center;
     align-items: center;
     /* margin-left: 25px; */
-    border: #4DAF00 solid 2px;
+    border: darkgreen solid 2px;
 }
 
 .container-imagem img{
@@ -105,7 +113,7 @@ input:focus{
 }
 
 p{
-    color: #4DAF00;
+    color: darkgreen;
     font-size: 20px;
     width: 300px;
     text-align: center;
@@ -126,7 +134,7 @@ a:hover{
 
 @keyframes trocaDeTela {
     0% {
-        transform: translateX(120px);
+        transform: translateX(0);
         opacity: 0;
     }
     100% {
@@ -134,4 +142,54 @@ a:hover{
         opacity: 1;
     }
 
+}
+
+
+.emailSenha, 
+.nomeRazao, 
+.cnpjTelefone{ /*Deixando lado a lado as div*/
+    display: flex;
+}
+
+#input_email,
+#input_nome,
+#input_cnpj{ /*Separando as inputs*/
+    margin-right: 5px;
+}
+
+#input_senha,
+#input_razaoSocial,
+#input_telefone{
+    margin-left: 5px;
+}
+
+
+
+/*CSS DA VALIDAÇÃO DO LOGIN*/
+.success{
+    font-size: 15px;
+    color: white;
+}
+
+.error{
+    font-size: 15px;
+    color: black;
+}
+
+
+/*CSS DA VALIDAÇÃO DO CADASTRO*/
+#div_cnpjCerto, 
+#div_nomeCerto,
+#div_emailCerto,
+#div_senhaCerta,
+#div_confirmarCerto{
+    color: white;
+}
+
+#div_cnpjErrado,
+#div_nomeErrado,
+#div_emailErrado,
+#div_senhaErrada,
+#div_confirmarErrado{
+    color: black;
 }

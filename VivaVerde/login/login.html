@@ -5,37 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/validacaoLogin.js"></script>
 </head>
 <body>
+
     <div class="container-login">
+
         <div class="container-imagem">
             <a href="../index.html"><img src="../imagens/fundoFinal.png"></a>
             <p>Não tem uma conta? faça o seu registro</p>
             <a class="login" href="../cadastro/cadastro.html">Registre-se</a>
         </div>
+
+        <div class="background-login">
+
         <div class="formulario-login">
             
            <span>Login</span>
-           <form action="#" method="#">
-          
+           
             <!-- Campo de Email -->
             <div class="campo">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="E-mail" maxlength="30" required>
-            </div class="campo">
+                <input type="email" id="input_email" name="email" placeholder="email@email.com" maxlength="30" required>
+            </div>
 
             <!-- Campo de Senha -->
             <div class="campo">
                 <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" placeholder="Senha" maxlength="20" required>
+                <input type="password" id="input_senha" name="senha" placeholder="xxxxxxxxx" maxlength="20" required>
             </div>
 
             <!-- Botão de Envio -->
             <div class="campo">
-                <input type="submit" value="Logar" class="btnLogar">
+                <button onclick="logar()" class="btnLogar">Logar</button>
             </div>
-            </form>
         </div>
+        <div id="div_mensagem"></div>
+        
+        </div>
+
     </div>    
+    
 </body>
 </html>

@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{ /*formatando todo hmtl e body*/
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*BARRA DE ROLAGEM DO NAVEGADOR*/
+::-webkit-scrollbar-track {
+    background-color:darkgreen;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #EDEDED;
+}
+/*BARRA DE ROLAGEM DO NAVEGADOR*/
+
+
+.banner{ /*Foto de fundo da home*/
+    background-image: url("../imagens/bannerResturant.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .container p{ /*Paragráfo da home*/
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(to right, darkgreen, rgb(0, 44, 0));
+    /* -webkit-background-clip: text; Adicionando suporte para navegadores WebKit */
+    /* background-clip: text; Padrão */
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+   text-align: center;
+} 
+
+.container-botao{ /*Para centralizar o botão preciso contralizar o container dele*/
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+}
+
+/*Botão suba*/
+.container-botao2{
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+}
+
+
+.botao-restaurante2{
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    border: lightgreen;
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: darkgreen;
+    letter-spacing: 3px;
+    bottom: 0;
+
+}
+
+.botao-restaurante{ /*Estilização do botão*/
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    border: lightgreen;
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: darkgreen;
+    letter-spacing: 3px;
+    transform: translateX(-50%);
+    animation: flutuar-botao 1s ease infinite alternate;
+    position: fixed;
+}
+
+.botao-restaurante:hover { /*Quando o mouse passar em cima do botão, a animação para*/
+    animation-play-state: paused;
+}
+
+.botao-restaurante:hover{
+    background-color: #4DAF00;
+}
+
+.container-botao .botao-restaurante{
+    position: absolute;
+    top: 85%;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*ANIMAÇÃO PARA O BOTÃO VEJA*/
+
+@keyframes flutuar-botao {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+
+h2{
+    margin-top: 25px;
+    text-align: center;
+}
+
+/*CARDS DOS RESTAURANTES*/
+
+.engloba-todas{ /*Englobando as div*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    word-break: break-word;
+}
+
+.titulo-endereco span{ /*deixando span em coluna e centralizando*/
+  display: block;
+  text-align: center;
+}
+
+.container-card{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    background: rgba(6, 11, 40, 0.15);
+    border: 1px solid rgb(36, 41, 63);
+    border-radius: 1.5rem;
+    padding-top: 8rem;
+    animation: 0.8s ease 0s 1 normal none running animacao-card; /*animação dos cards dos restaurantes*/
+    justify-content: space-between;
+}
+
+
+.botao-estilo{
+    width: 400px;
+    height: 3rem;
+    background: darkgreen;
+    border-radius: 0px 0px 1.5rem 1.5rem; /*pontaE pontaS*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem; /*20px*/
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    align-self: flex-end;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.conteudo-modal {
+    background: #EDEDED;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    height: 50%;
+
+}
+
+.botao-modal{
+    width: 25px;
+    background-color: darkgreen;
+    color: white;
+}
+
+
+/*ANIMAÇÃOM DOS CARDS DOS RESTAURANTES*/
+@keyframes animacao-card {
+    
+    0% {
+        opacity: 0;
+        transform: translate3d(0px, -32px, 0px);
+    }
+    
+    
+    100% {
+        opacity: initial;
+        transform: initial;
+    }
+}
