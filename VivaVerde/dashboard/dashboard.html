@@ -7,10 +7,10 @@
 
     <link rel="stylesheet" href="../css/dashboard.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
-    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!--Isso importará a biblioteca Chart.js diretamente do CDN.-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+
 
 </head>
 <body>
@@ -30,34 +30,22 @@
     </div>
 
 
-    <div>
-        <canvas id="myChart"></canvas>
+    <div class="engloba-graficos">
+
+        <!--Este é o local onde o gráfico será desenhado (DONUT)-->
+        <div class="container">
+          <canvas id="myDonutChart" width="400" height="400"></canvas>
+        </div>
+
+
+        <!--Este é o local onde o gráfico será desenhado (BARRAS)-->
+        <div class="container">
+          <canvas id="myBarChart" width="400" height="400"></canvas>
       </div>
-      
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      
-      <script>
-        const ctx = document.getElementById('myChart');
-      
-        new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-              label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
-              borderWidth: 1
-            }]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true
-              }
-            }
-          }
-        });
-      </script>
+
+  </div>
 
 </body>
 </html>
+
+<script src="../js/dashboard.js"></script>

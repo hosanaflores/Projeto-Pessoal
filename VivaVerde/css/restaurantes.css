@@ -193,9 +193,17 @@ h2{
     background: #EDEDED;
     padding: 20px;
     border-radius: 5px;
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
+    position: relative;
+}
 
+.div-button{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 3px;
+    top: 2px;
 }
 
 .botao-modal{

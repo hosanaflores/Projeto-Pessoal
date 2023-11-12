@@ -59,3 +59,14 @@ li a{
     list-style-type: none;
     color: white;
 }
+
+
+
+/*ÁREA DE GRÁFICOS*/
+
+.engloba-graficos{ /*CENTRALIZANDO OS GRÁFICOS*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+}
