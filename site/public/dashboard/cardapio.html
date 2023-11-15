@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardapio</title>
+
     <link rel="stylesheet" href="../css/cardapio.css">
+    <script src="../js/dashboard-sessao.js"></script> <!--VALIDAÇÃO DA SESSÃO-->
+    
 </head>
-<body>
+
+<body onload="validarSessao()">
 
     <div class="menu-lateral">
         <div class="titulo">
-            <h4>Menu</h4>
+            <h4>Olá, <span id="mensagem_usuario"> ! </span></h4>
         </div>
         <div class="navbar">
     <ul>
         <li><a href="../dashboard/dashboard.html" class="borda">Restaurantes</a></li>
         <li><a href="./cardapio.html" class="borda">Cardápios</a></li>
-        <li><a href="#" class="borda">Pratos</a></li>
-        <li><a href="../login.html" class="borda">Sair</a></li>
+        <li><a href="./pratos.html" class="borda">Pratos</a></li>
+        <li><a onclick="limparSessao()" class="borda">Sair</a></li>
     </ul>
         </div>
     </div>
 
 
    <!--FORMULÁRIO-->
-    <div class="container-login">
+    <div class="container-cardapio">
 
-        <div class="background-login">
-
-        <div class="formulario-login">
+        <div class="formulario-cardapio">
             
            <span>Cardápio</span>
            
@@ -45,8 +47,6 @@
         </div>
         <div id="div_mensagem"></div>
         
-        </div>
-
     </div>    
 
 </body>

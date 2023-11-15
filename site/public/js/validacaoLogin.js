@@ -1,9 +1,12 @@
+
+// Minha função de LOGAR 
 function logar(){
     
     var email = input_email.value;
     var senha = input_senha.value;
 
 
+    //VALIDAÇÃO DAS INPUTS
     if(email.indexOf('@') < 0 && email.indexOf('.com') < 0){
         div_mensagem.innerHTML = `<p class="error"> Email incorreto! <br> </p>`;
     }
@@ -29,12 +32,11 @@ function logar(){
         if (resposta.status == 200) {
 
             resposta.json().then(json => {
-                console.log(json[0].nomeFantasia); //vetor, pegando o nomeFantasia do primeiro item
+                // console.log(json[0].nomeFantasia); //vetor, pegando o nomeFantasia do primeiro item
                 console.log(JSON.stringify(json));
-                sessionStorage.EMAIL_USUARIO = json.email;
-                sessionStorage.NOME_USUARIO = json.nome;
-                sessionStorage.ID_USUARIO = json.id; 
-                
+                sessionStorage.EMAIL_USUARIO = json[0].email;
+                sessionStorage.NOME_USUARIO = json[0].nomeFantasia;
+                sessionStorage.ID_USUARIO = json[0].idRestaurante; 
                 window.location.href = "../dashboard/dashboard.html";
                 // apenas para exibir o loading
             });
@@ -52,3 +54,9 @@ function logar(){
     })
     
 }
+
+
+
+
+
+

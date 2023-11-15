@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardapio</title>
+
+    <link rel="stylesheet" href="../css/pratos.css">
+    <script src="../js/dashboard-sessao.js"></script> <!--VALIDAÇÃO DA SESSÃO-->
+    
+</head>
+<body onload="validarSessao()">
+
+    <div class="menu-lateral">
+        <div class="titulo">
+            <h4>Olá, <span id="mensagem_usuario"> ! </span></h4>
+        </div>
+        <div class="navbar">
+    <ul>
+        <li><a href="../dashboard/dashboard.html" class="borda">Restaurantes</a></li>
+        <li><a href="./cardapio.html" class="borda">Cardápios</a></li>
+        <li><a href="./pratos.html" class="borda">Pratos</a></li>
+        <li><a onclick="limparSessao()" class="borda">Sair</a></li>
+    </ul>
+        </div>
+    </div>
+
+
+   <!--FORMULÁRIO-->
+    <div class="container-pratos">
+
+        <div class="formulario-pratos">
+            
+           <span>Prato</span>
+           
+            <!-- Campo de pratos -->
+            <div class="campo">
+                <label for="pratos">Nome do prato</label>
+                <input type="text" id="input_pratos" name="pratos" placeholder="Veggetta" maxlength="15" required>
+            </div>
+
+              
+            
+            <div class="campo">
+                <label for="pratos">Preço</label>
+                <input type="number" id="input_pratos" name="pratos" placeholder="12.50" maxlength="3" required>
+            </div>
+
+            <!--Tipo do restaurante-->
+            <div class="campo">
+                <label for="tipos">Escolha o tipo de Prato:</label>
+                    <select id="select_tipo" name="tipos">
+                        <option value="ovolactovegetariano" selected>Ovolactovegetariano</option>
+                        <option value="ovovegetarianos">Ovovegetarianos</option>
+                        <option value="lactovegetarianos">Lactovegetarianos</option>
+                        <option value="vegetarianocrudivoros">Vegetariano Crudívoros</option>
+                        <option value="vegetarianofrugivoros">Vegetariano Frugívoros</option>
+                        <option value="vegetarianorestrito">Vegetariano Restrito</option>
+                        <option value="vegano">Vegano</option>
+                    </select>
+                </div>
+
+            <!-- Botão de Envio -->
+            <div class="campo">
+                <button onclick="cadastrar()" class="btnCadastrar">Cadastrar</button>
+            </div>
+        </div>
+        <div id="div_mensagem"></div>
+        
+    </div>    
+
+</body>
+</html>

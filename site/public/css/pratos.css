@@ -65,7 +65,7 @@ li a{
 
 /*ÁREA DE FORMULÁRIO*/
 
-.container-cardapio span{
+.container-pratos span{
     display: block;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -93,9 +93,6 @@ label{
     align-items: center;
 }
 
-input{
-    padding-left: 8px;
-}
 
 button, input{
     border-radius: 5px;
@@ -119,8 +116,26 @@ input:focus{
     outline: none;
 }
 
+input{
+    padding-left: 8px;
+}
 
-.container-cardapio{
+select {
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    width: 250px;
+    display: block;
+    margin-top: 8px;
+    justify-content: space-between;
+    padding-left: 10px;    
+}
+
+select:focus{
+    outline: none;
+}
+
+.container-pratos{
    height: 100%;
    width: 100%; 
    display: flex;
@@ -130,7 +145,7 @@ input:focus{
 }
 
 
-.formulario-cardapio{
+.formulario-pratos{
     background-color: darkgreen;
     width: 50%;
     height: 50%;
@@ -141,4 +156,3 @@ input:focus{
     flex-direction: column;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.422); 
 }
-
