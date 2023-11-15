@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} /*Tirando toda formatação base*/
+
+html{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-padding-top: 14%;
+}
+html, body{ /*formatando todo hmtl e body*/
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*BARRA DE ROLAGEM DO NAVEGADOR*/
+::-webkit-scrollbar-track {
+    background-color: darkgreen;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #EDEDED;
+}
+/*BARRA DE ROLAGEM DO NAVEGADOR*/
+
+#header { 
+    height: 99%;
+}
+
+nav h1 a{ /*Retirando o underline e colocando cor no meu LOGO do header*/
+    text-decoration: none;
+    color: white;
+}
+
+nav{ /*Arrumando meu Header*/
+    background-color: darkgreen;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 12%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+nav ul{ /*Para ficar flexível, lado a lado*/
+    display: flex;
+    list-style: none;
+}
+
+nav ul li { /*dando espaçamento entre as li*/
+    margin: 0 40px;
+}
+
+li{ /*deixando bonita as li*/
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+nav ul li a { /*Retirando meu underlino dos links da navbar e dando cor*/
+    text-decoration: none;
+    justify-content: space-evenly;
+    display: flex;
+    color: white;
+}
+
+.banner{ /*Foto de fundo da home*/
+    background-image: url("../assets/imagens/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .container p{ /*Paragráfo da home*/
+    color: darkgreen;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.container-botao{ /*Para centralizar o botão preciso contralizar o container dele*/
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+}
+
+.botao-quiz{ /*Deixando botão teste bonito*/
+    border-radius: 5px;
+    width: fit-content;
+    height: 35px;
+    background-color: darkgreen;
+    border: none;
+    color: white;
+    text-transform: lowercase;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.botao-quiz:hover{
+   background-color: #265700;
+}
+
+.container-botao .botao-quiz{ /*Usando position absolute para deixar o botão na foto da home*/
+   position: absolute;
+   top: 85%;
+}
+
+.container-vv{
+    margin-top: 100px;
+    display: flex;
+}
+
+.title-veganismo{
+    color: darkgreen;
+    font-size: 30px;
+    margin-left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragrafo-veganismo{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 15%;
+}
+
+.imagem-veganismo{
+    background-image: url("../assets/imagens/vegetarian.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    width: 40vw;
+    border-radius: 15px;
+    display: flex;
+    margin-left: 15%;
+    margin-top: 25px;
+}
+
+.imagem-vegetarianismo{
+    background-image: url("../assets/imagens/vegan.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    width: 40vw;
+    border-radius: 15px;
+    display: flex;
+    margin-right: 15%;
+    margin-top: 25px;
+}
+
+.title-vegetarianismo{
+    color: darkgreen;
+    font-size: 30px;
+    margin-right: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragrafo-vegetarianismo{
+    display: flex;
+    margin-top: 50px;
+    margin-right: 15%;
+}
+
+/*TIPOS DE VEGETARIANOS*/
+.title-tipos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    color: darkgreen;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.tipos-vegetarianos{
+    background-color: #8cc163;
+    width: 90vw;
+    height: 70vh;
+    display: flex;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 15px;
+    justify-content: space-evenly;
+}
+
+.paragrafo-1, .paragrafo-2,
+.paragrafo-3,.paragrafo-4, .paragrafo-5{
+    text-align: center;
+    font-size: 14px;
+    width: 200px;
+    margin-top: 25px;
+}
+.fotos-tipos{
+    border-radius: 100px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fotos-tipos img{
+    border-radius: 200px;
+    height: 100px;
+    width: 100px;
+    object-fit: cover; /*object-fit como ele irá colocar a imagem em relação a width e height do elemento. Cover = preenche tudo */
+    border: white solid 1px;
+}
+
+/*SOBRE MIM*/
+.title-servico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    color: darkgreen;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.area-sobre-mim{
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagens-sobrepostas img{
+    margin-left: 4vw;
+    margin-top: 100px;
+    width: 30vw;
+}
+
+.container-eu{
+    display: flex;
+    width: 40vw;
+    height: 55vh;
+    background-color: #ffffff; 
+    justify-content: center; 
+    margin-top: 100px;
+    border-radius: 15px;
+    margin-right: 4vw;
+    border: darkgreen solid 1px;
+}
+
+.container-eu .sobre-mim {
+    display: flex;
+    justify-content: center;
+    align-items: center; /*TEXTO ALINHADO AO MEIO DO CARD*/
+    padding: 0 25px 0 25px;
+}
+
+/*ÁREA CARDÁPIO*/
+.area-cardapio{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+}
+
+.cardapio-escrita{
+    width: 50%;
+    background-color: #EDEDED;
+    height: 70vh;
+}
+
+.especialidades{
+    text-transform: uppercase;
+    color: darkgreen;
+    font-size: 15px;
+    display: block;
+    margin-top: 15px;
+}
+
+.cardapio-viva-verde{
+    text-transform: uppercase;
+    color: darkgreen;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.valor{
+    color: darkgreen;
+}
+
+.imagem-cardapio{
+    width: 50%;  
+    background: url("../assets/imagens/cardapioCafe.jpg") center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    width: 50vw;
+}
+
+.imagem-cardapio img{
+    width: 100%;
+    height: 70vh;
+}
+
+.conteudo {
+    margin-top: 25px;
+}
+
+.conteudo img{
+    padding: 0 25px 0 25px;
+}
+
+.especialidades, .cardapio-viva-verde, .conteudo{
+    margin-left: 25px;
+}
+
+.botaoCardapio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btnCardapioComp{
+    background-color: #8cc163;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/*FOOTER*/
+.footer{
+    background-color: darkgreen;
+    display: flex;
+    bottom: 0;
+    height: 25vh;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.esquerda, .direita{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    color: white;
+}
+
+.direita p, .esquerda p{
+    padding: 15px 0 0 0;
+    cursor: pointer;
+}
+
+
+.centro .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+   
+}
+
+.centro img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+
+/*
+#4DAF00 cor antiga do header, etc
+*/

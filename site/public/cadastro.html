@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Restaurantes</title>
+
+    <link rel="stylesheet" href="./css/cadastro.css">
+
+</head>
+<body>
+    
+    <div class="container-cadastro">
+        <div class="formulario-cadastro">
+            
+           <span>Cadastro de Restaurantes</span>
+
+        <div class="cnpjTelefone">
+
+               <!--Campo de CNPJ-->
+
+            <div class="campo">
+                <label for="input_cnpj">CNPJ</label>
+                <input oninput="cadastrar()" type="text" id="input_cnpj" name="cnpj" placeholder="CNPJ" maxlength="14" required>
+                <div id="div_cnpj"></div> 
+                <div id="div_cnpjErrado"></div> 
+            </div>
+
+
+               <!--Campo de Telefone -->
+            <div class="campo">
+                <label for="input_telefone">Telefone</label>
+                <input oninput="cadastrar()" type="text" id="input_telefone" name="telefone" placeholder="4002-8922" maxlength="20" required>
+                <div id="div_tel"></div> 
+                <div id="div_telefoneErrado"></div> 
+            </div>
+
+        </div>
+
+
+        <div class="nomeRazao">
+
+            <!-- Campo de Nome -->
+            <div class="campo">
+                <label for="input_nome">Nome</label>
+                <input oninput="cadastrar()" type="text" id="input_nome" name="nome" placeholder="Nome do seu restaurante" maxlength="20" required>
+                <div id="div_nome"></div> 
+                <div id="div_nomeErrado"></div> 
+            </div>
+
+               <!-- Campo de Razão Social -->
+               <div class="campo">
+                <label for="input_razaoSocial">Razão Social</label>
+                <input oninput="cadastrar()" type="text" id="input_razaoSocial" name="razaoSocial" placeholder="Razão Social" maxlength="20" required>
+                <div id="div_razao"></div> 
+                <div id="div_razaoErrado"></div> 
+            </div>
+
+        </div>
+
+
+        <div class="emailSenha">
+            
+            <!-- Campo de Email -->
+            <div class="campo">
+                <label for="input_email">E-mail</label>
+                <input oninput="cadastrar()" type="email" id="input_email" name="email" placeholder="E-mail" maxlength="20" required>
+                <div id="div_email"></div> 
+                <div id="div_emailErrado"></div>
+            </div class="campo">
+
+            <!-- Campo de Senha -->
+            <div class="campo">
+                <label for="input_senha">Senha</label>
+                <input oninput="cadastrar()" type="password" id="input_senha" name="senha" placeholder="Senha" maxlength="20" required>
+                <div id="div_senha"></div> 
+                <div id="div_senhaErrada"></div> 
+            </div>
+
+        </div>
+
+            <!--Campo de confirmação de senha-->
+            <div class="campo">
+                <label for="input_confirmacao">Confirmar senha</label>
+                <input oninput="cadastrar()" type="password" id="input_confirmacao" name="confirmacao" placeholder="Confirme sua senha" maxlength="20" required>
+                <div id="div_confirmar"></div>
+                <div id="div_confirmarErrado"></div>
+            </div>
+
+            <!--Tipo do restaurante-->
+            <div class="campo">
+                <label for="tipos">Escolha seu tipo de Restaurante:</label>
+                    <select id="select_tipo" name="tipos">
+                        <option value="vegetariano" selected>Vegetariano</option>
+                        <option value="vegano">Vegano</option>
+                        <option value="misto">Vegano e Vegetariano</option>
+                    </select>
+            </div>
+
+            <!-- Botão de Envio -->
+            <div class="campo">
+                <button onclick="enviar()" class="btnCadastrar">Cadastrar</button>
+                <!-- <div id="div_mensagem"></div> -->
+            </div>
+          </div>
+
+        <div class="container-imagem">
+            <a href="./index.html"><img src="./assets/imagens/fundoFinal.png"></a>
+            <p>Após realizar o seu cadastro, faça o seu Login</p>
+            <a class="login" href="./login.html">Login</a>
+        </div>
+        
+    </div> 
+
+</body>
+</html>
+
+<script src="./js/validacaoCadastro.js"></script>

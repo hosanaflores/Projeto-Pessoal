@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardapio</title>
+    <link rel="stylesheet" href="../css/cardapio.css">
+</head>
+<body>
+
+    <div class="menu-lateral">
+        <div class="titulo">
+            <h4>Menu</h4>
+        </div>
+        <div class="navbar">
+    <ul>
+        <li><a href="../dashboard/dashboard.html" class="borda">Restaurantes</a></li>
+        <li><a href="./cardapio.html" class="borda">Cardápios</a></li>
+        <li><a href="#" class="borda">Pratos</a></li>
+        <li><a href="../login.html" class="borda">Sair</a></li>
+    </ul>
+        </div>
+    </div>
+
+
+   <!--FORMULÁRIO-->
+    <div class="container-login">
+
+        <div class="background-login">
+
+        <div class="formulario-login">
+            
+           <span>Cardápio</span>
+           
+            <!-- Campo de Cardapio -->
+            <div class="campo">
+                <label for="cardapio">Cardápio</label>
+                <input type="cardapio" id="input_cardapio" name="cardapio" placeholder="Veggetta" maxlength="15" required>
+            </div>
+
+            <!-- Botão de Envio -->
+            <div class="campo">
+                <button onclick="cadastrar()" class="btnCadastrar">Cadastrar</button>
+            </div>
+        </div>
+        <div id="div_mensagem"></div>
+        
+        </div>
+
+    </div>    
+
+</body>
+</html>

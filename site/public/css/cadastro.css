@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} /*Tirando toda formatação base*/
+
+html, body{ /*formatando todo hmtl e body*/
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url("../assets/imagens/linhas1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    animation: trocaDeTela 1s ease;
+    /* border: darkgreen solid 2px; */
+}
+
+.formulario-cadastro{
+    background-color: darkgreen;
+    width: 40%;
+    height: 99%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.422);
+}
+
+span{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+label{
+    color: white;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem; /*equivale a 16px*/
+}
+
+.btnCadastrar{
+    display: block;
+    margin-top: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out;
+    height: 30px;
+}
+
+.btnCadastrar:hover{
+    background-color: rgb(196, 255, 196);
+}
+
+input, select{
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    width: 250px;
+    display: block;
+    margin-top: 8px;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+button{
+    border-radius: 5px;
+    width: 100px;
+}
+
+input:focus, select:focus{
+    outline: none;
+}
+
+.container-imagem{
+   display: flex;
+   flex-direction: column;
+   height: 99%;
+   width: 40%;
+   background-color: #EDEDED;
+   border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+   justify-content: center;
+    align-items: center;
+    /* margin-left: 25px; */
+    border: darkgreen solid 2px;
+}
+
+.container-imagem img{
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+}
+
+p{
+    color: darkgreen;
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: #193a00d5;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out;
+    font-weight: bold;
+}
+
+a:hover{
+    color: black;
+}
+
+@keyframes trocaDeTela {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+.emailSenha, 
+.nomeRazao, 
+.cnpjTelefone{ /*Deixando lado a lado as div*/
+    display: flex;
+}
+
+#input_email,
+#input_nome,
+#input_cnpj{ /*Separando as inputs*/
+    margin-right: 5px;
+}
+
+#input_senha,
+#input_razaoSocial,
+#input_telefone{
+    margin-left: 5px;
+}
+
+
+
+/*CSS DA VALIDAÇÃO DO LOGIN*/
+.success{
+    font-size: 15px;
+    color: white;
+}
+
+.error{
+    font-size: 15px;
+    color: black;
+}
+
+
+/*CSS DA VALIDAÇÃO DO CADASTRO*/
+#div_cnpjCerto, 
+#div_nomeCerto,
+#div_emailCerto,
+#div_senhaCerta,
+#div_confirmarCerto{
+    color: white;
+}
+
+#div_cnpjErrado,
+#div_nomeErrado,
+#div_emailErrado,
+#div_senhaErrada,
+#div_confirmarErrado{
+    color: black;
+}

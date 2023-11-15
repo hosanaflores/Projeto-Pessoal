@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    display: flex;
+    background-color: #ffffffee;
+}
+html, body{ /*formatando todo hmtl e body*/
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*BARRA DE ROLAGEM DO NAVEGADOR*/
+::-webkit-scrollbar-track {
+    background-color: darkgreen;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #EDEDED;
+}
+/*BARRA DE ROLAGEM DO NAVEGADOR*/
+
+/*MENU LATERAL*/
+.menu-lateral {
+    background-color: darkgreen;
+    width: 15%;
+    height: 100vh;
+}
+
+h4 {
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.navbar {
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style-type: none;
+    align-items: center;
+    padding: 25px;
+}
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 40px;
+}
+
+li a{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+}
+
+
+/*FORMULÁRIO*/
+.container-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    animation: trocaDeTela 1s ease; /*fazer a animação funcionar... o ease é o jeito que a animação aparece*/
+    /* border: darkgreen solid 2px; */
+}
+
+.formulario-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+span{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+label{
+    color: white;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem; /*equivale a 16px*/
+}
+
+.btnLogar{
+    display: block;
+    margin-top: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out;
+    height: 30px;
+}
+
+.btnLogar:hover{
+    background-color: rgb(196, 255, 196);
+}
+
+button, input{
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    width: 250px;
+    display: block;
+    margin-top: 8px;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+button{
+    margin-bottom: 25px; /*Para dar distância da mensagem de validação do button*/
+}
+
+input:focus{
+    outline: none;
+}
+
+/* .container-imagem{
+   display: flex;
+   flex-direction: column;
+   height: 70%;
+   width: 30%;
+   background-color: #EDEDED;
+   border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+   justify-content: center;
+    align-items: center;
+    /* margin-left: 25px; */
+    /* border: darkgreen solid 2px; 
+} 
+*/
+
+/* .container-imagem img{
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+} */
+
+p{
+    color: darkgreen;
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.a{
+    text-decoration: none;
+    color: #193a00d5;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out;
+    font-weight: bold;
+}
+
+.a:hover{
+    color: black;
+}
+
+.background-login{
+    background-color: darkgreen;
+    width: 100%;
+    height: 70%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.422);
+}

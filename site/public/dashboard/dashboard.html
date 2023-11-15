@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <!--Isso importará a biblioteca Chart.js diretamente do CDN.-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+
+
+</head>
+<body>
+    
+    <div class="menu-lateral">
+        <div class="titulo">
+            <h4>Menu</h4>
+        </div>
+        <div class="navbar">
+    <ul>
+        <li><a href="#" class="borda">Restaurantes</a></li>
+        <li><a href="./cardapio.html" class="borda">Cardápios</a></li>
+        <li><a href="#" class="borda">Pratos</a></li>
+        <li><a href="../login.html" class="borda">Sair</a></li>
+    </ul>
+        </div>
+    </div>
+
+
+    <div class="engloba-graficos">
+
+        <!--Este é o local onde o gráfico será desenhado (DONUT)-->
+        <div class="container">
+          <canvas id="myDonutChart" width="400" height="400"></canvas>
+        </div>
+
+
+        <!--Este é o local onde o gráfico será desenhado (BARRAS)-->
+        <div class="container">
+          <canvas id="myBarChart" width="400" height="400"></canvas>
+      </div>
+
+  </div>
+
+</body>
+</html>
+
+<script src="../js/dashboard.js"></script>
