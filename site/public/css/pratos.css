@@ -147,8 +147,8 @@ select:focus{
 
 .formulario-pratos{
     background-color: darkgreen;
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 70%;
     border-radius: 15px;  
     display: flex;
     justify-content: center;
