@@ -132,6 +132,10 @@ h2{
 
 /*CARDS DOS RESTAURANTES*/
 
+#listaRestaurantes{ /*Para deixar separado em 3 cards*/
+    flex-wrap: wrap; /*flex-wrap: wrap garantirá que eles se movam para a próxima linha quando não houver espaço suficiente na largura da tela.*/
+}
+
 .engloba-todas{ /*Englobando as div*/
     display: flex;
     justify-content: space-evenly;

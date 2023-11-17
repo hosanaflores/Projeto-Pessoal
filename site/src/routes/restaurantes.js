@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 
 
-var pratosController = require("../controllers/restaurantesController");
+var restaurantesController = require("../controllers/restaurantesController");
 
 
 router.post("/cadastrar/:fkCardapio", function (req, res) {
@@ -10,10 +10,13 @@ router.post("/cadastrar/:fkCardapio", function (req, res) {
 });
 
 
+
+
+
 /* ----------------------------------------------------------- */
 
-router.get("/buscarCardapioPorId/:idRestaurante", function (req, res) {
-  restaurantesController.buscarCardapioPorId(req, res);
+router.get("/buscarRestaurantes/", function (req, res) {
+  restaurantesController.buscarRestaurantes(req, res);
 });
 
 

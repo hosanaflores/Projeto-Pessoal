@@ -1,9 +1,8 @@
 var restaurantesModel = require("../models/restaurantesModel");
 
-function buscarCardapioPorId(req, res) {
-    var idRestaurante = req.params.idRestaurante;
+function buscarRestaurantes(req, res) {
   
-    pratosModel.buscarCardapioPorId(idRestaurante).then((resultado) => {
+    restaurantesModel.buscarRestaurantes().then((resultado) => {
       res.status(200).json(resultado);
     });
   }
@@ -18,6 +17,6 @@ function buscarCardapioPorId(req, res) {
       // editar,
       // deletar
       // buscarPorNome,
-      buscarCardapioPorId
+      buscarRestaurantes
   
   }

@@ -1,7 +1,7 @@
 var database = require("../database/config");
 
-function buscarCardapioPorId(idRestaurante) { 
-    var query = `select * from Cardapio where fkRestaurante = '${idRestaurante}'`;
+function buscarRestaurantes() { 
+    var query = `select * from Restaurante`;
   
     return database.executar(query);
   }
@@ -15,6 +15,6 @@ function buscarCardapioPorId(idRestaurante) {
       // editar,
       // deletar
       // buscarPorCnpj,
-       buscarCardapioPorId,
+       buscarRestaurantes
         // cadastrar,
   }
