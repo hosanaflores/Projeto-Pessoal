@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurantes</title>
     <link rel="stylesheet" href="./css/restaurantes.css">
+
+    <script src="./js/restaurante-sessao.js"></script>
+
 </head>
-<body>
+
+<body onload="listar()">
 
     <div class="banner" id="banner">
         <div class="container">
@@ -23,7 +27,7 @@
 
 <div class="engloba-todas">
 
-    <div class="container-card">
+    <div class="container-card" id="listaRestaurantes">
         <div class="conteudo-card">
             <div class="titulo-endereco">
                 <span class="titulo">1 Card</span>

@@ -12,11 +12,11 @@ function cadastrar(fkCardapio, nomePrato, tipo, preco) {
 
 
 
-function buscarCardapioPorId(idRestaurante) { 
-  var query = `select * from Cardapio where fkRestaurante = '${idRestaurante}'`;
+// function buscarCardapioPorId(idRestaurante) { 
+//   var query = `select * from Cardapio where fkRestaurante = '${idRestaurante}'`;
 
-  return database.executar(query);
-}
+//   return database.executar(query);
+// }
 
 
 module.exports = {
@@ -27,6 +27,5 @@ module.exports = {
     // editar,
     // deletar
     // buscarPorCnpj,
-     buscarCardapioPorId,
-      cadastrar,
+    //  buscarCardapioPorId
 }

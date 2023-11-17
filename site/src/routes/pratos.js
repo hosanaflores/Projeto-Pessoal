@@ -12,9 +12,9 @@ router.post("/cadastrar/:fkCardapio", function (req, res) {
 
 /* ----------------------------------------------------------- */
 
-router.get("/buscarCardapioPorId/:idRestaurante", function (req, res) {
-  pratosController.buscarCardapioPorId(req, res);
-});
+// router.get("/buscarCardapioPorId/:idRestaurante", function (req, res) {
+//   pratosController.buscarCardapioPorId(req, res);
+// });
 
 
 module.exports = router;

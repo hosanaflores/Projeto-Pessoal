@@ -65,7 +65,7 @@ var database = require("../database/config");
 function cadastrar(fkRestaurante, nome) {
     // console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function publicar(): ", titulo, descricao, idUsuario);
     var instrucao = `
-        INSERT INTO Cardapio (fkRestaurante, nome) VALUES (${fkRestaurante}, '${nome}');
+        INSERT INTO Cardapio (idCardapio, fkRestaurante, nome) VALUES (${fkRestaurante}, ${fkRestaurante}, '${nome}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

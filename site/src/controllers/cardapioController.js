@@ -1,4 +1,4 @@
-var avisoModel = require("../models/avisoModel");
+var cardapioModel = require("../models/cardapioModel");
 
 // function listar(req, res) {
 //     avisoModel.listar().then(function (resultado) {
@@ -70,7 +70,7 @@ function cadastrar(req, res) {
     } else if (nome == undefined) {
         res.status(403).send("O nome do cardápio está indefinido!");
     } else {
-        avisoModel.cadastrar(fkRestaurante, nome)
+        cardapioModel.cadastrar(fkRestaurante, nome)
             .then(
                 function (resultado) {
                     res.json(resultado);
