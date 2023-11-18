@@ -14,3 +14,44 @@ function cadastrar() {
 
 }
 
+
+function listarCardapio(fkRestaurante) {
+
+    fetch(`/cardapios/buscarCardapios/${fkRestaurante}`, {
+      method: "GET", //pegar
+    })
+      .then(function (resposta) {
+        console.log(resposta);
+        resposta.json().then((cardapios) => {
+
+          var tamanho = cardapios.length;
+          for(var contador = 0; contador < tamanho; contador++){
+            var cardapioAtual = cardapios[contador];
+
+            meuModal.innerHTML = `
+
+            <div class="conteudo-modal" id="lista_pratos">
+
+                <span class="cardapio">${cardapioAtual.nome}</span>
+
+                <div class="div-button">
+                    <button onclick="fecharCardapio()" class="botao-modal">X</button>
+                </div>
+        
+                <img src="./assets/imagens/cardapioCafe.jpg">
+
+            </div>
+
+            `;
+    
+            console.log(cardapios);
+          }
+
+         
+        });
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+
+  }

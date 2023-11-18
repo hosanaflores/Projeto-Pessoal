@@ -1,5 +1,19 @@
 var database = require("../database/config");
 
+// SELECT DO BANCO PARA TRAZER O NOME DOS CARDAPIOS NO MEU MODAL
+function buscarCardapios(fkRestaurante) { //(nome) ta recebendo alguma coisa
+var query = `
+        
+    SELECT Cardapio.idCardapio, Cardapio.nome FROM Restaurante 
+			JOIN Cardapio
+            ON fkRestaurante = idRestaurante
+            WHERE ${fkRestaurante} = idCardapio;
+
+    `;
+  
+    return database.executar(query);
+  }
+
 // function listar() {
 //     console.log("ACESSEI O AVISO  MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
 //     var instrucao = `
@@ -62,7 +76,7 @@ var database = require("../database/config");
 //     return database.executar(instrucao);
 // }
 
-function cadastrar(fkRestaurante, nome) {
+function cadastrar(fkRestaurante, nome) { // PARA CADASTRAR NO MEU BANCO DE DADOS
     // console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function publicar(): ", titulo, descricao, idUsuario);
     var instrucao = `
         INSERT INTO Cardapio (idCardapio, fkRestaurante, nome) VALUES (${fkRestaurante}, ${fkRestaurante}, '${nome}');
@@ -93,7 +107,8 @@ module.exports = {
     // listar,
     // listarPorUsuario,
     // pesquisarDescricao,
-    cadastrar
+    cadastrar,
+    buscarCardapios
     // editar,
     // deletar
 }

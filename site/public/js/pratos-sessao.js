@@ -19,23 +19,38 @@ function cadastrar() {
 }
 
 
-// function listar() {
-//     var fkRestaurante = sessionStorage.ID_USUARIO;
+function listarPratos(fkCardapio) { //Para listar os pratos com MENU (teste)
 
-//     fetch(`/pratos/buscarCardapioPorId/${fkRestaurante}`, {
-//       method: "GET", //pegar
-//     })
-//       .then(function (resposta) {
-//         resposta.json().then((cardapios) => {
-//           cardapios.forEach((cardapio) => { //Cardapios -> Vetor que vem do banco, e o cardapio são os itens do vetor {json}
-//             // listaCardapios.innerHTML += `<option value='${cardapio.idCardapio}'>${cardapio.nome}</option>`;
-//             console.log(cardapio);
-//           });
-//         });
-//       })
-//       .catch(function (resposta) {
-//         console.log(`#ERRO: ${resposta}`);
-//       });
-//   }
+    fetch(`/pratos/buscarPratos/${fkCardapio}`, {
+      method: "GET", //pegar
+    })
+      .then(function (resposta) {
+        console.log(resposta);
+        resposta.json().then((pratos) => {
 
+          var tamanho = pratos.length;
+          for(var contador = 0; contador < tamanho; contador++){
+            var pratoAtual = pratos[contador];
+
+            lista_pratos.innerHTML += `
+            
+            <div class="conteudo-pratos">
+                <span class="nomePrato">${pratoAtual.nomePrato}</span>
+                <img src="./assets/imagens/lineCardapio.svg" class="tipo">
+                <span class="preco">R$ ${pratoAtual.preco}</span>
+            </div>
+
+            `;
+    
+            console.log(pratos);
+          }
+
+         
+        });
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+      
+  }
 

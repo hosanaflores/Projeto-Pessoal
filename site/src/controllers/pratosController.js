@@ -1,5 +1,15 @@
 var pratosModel = require("../models/pratosModel");
 
+function buscarPratos(req, res) { // (req, res) estou recebendo um parametro e dando um nome pra ela 
+    var fkCardapio = req.params.fkCardapio;
+
+    pratosModel.buscarPratos(fkCardapio).then((resultado) => {
+      res.status(200).json(resultado);
+    });
+  }
+
+
+
 function cadastrar(req, res) {
     var fkCardapio = req.params.fkCardapio;
     var nomePrato = req.body.nomeServer;
@@ -50,6 +60,7 @@ module.exports = {
     // listarPorUsuario,
     // pesquisarDescricao,
     cadastrar,
+    buscarPratos
     // editar,
     // deletar
     // buscarPorNome,

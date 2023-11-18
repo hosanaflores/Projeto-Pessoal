@@ -7,4 +7,5 @@ function verCardapio(){
 /*Fechar cardápio*/ 
 function fecharCardapio(){
     document.getElementById('meuModal').style.display = 'none';
+    meuModal.innerHTML = ``; /* para limpar*/
 }

@@ -1,5 +1,14 @@
 var cardapioModel = require("../models/cardapioModel");
 
+function buscarCardapios(req, res) { // (req, res) estou recebendo um parametro e dando um nome pra ela 
+    var fkRestaurante = req.params.fkRestaurante;
+
+    cardapioModel.buscarCardapios(fkRestaurante).then((resultado) => {
+      res.status(200).json(resultado);
+    });
+  }
+
+
 // function listar(req, res) {
 //     avisoModel.listar().then(function (resultado) {
 //         if (resultado.length > 0) {
@@ -60,7 +69,7 @@ var cardapioModel = require("../models/cardapioModel");
 //         );
 // }
 
-function cadastrar(req, res) {
+function cadastrar(req, res) { // PARA CADASTRAR MEU CARDAPIO COM FK (idRestaurante)
     var fkRestaurante = req.params.fkRestaurante;
     var nome = req.body.nomeServer;
  
@@ -128,7 +137,8 @@ module.exports = {
     // listar,
     // listarPorUsuario,
     // pesquisarDescricao,
-    cadastrar
+    cadastrar,
+    buscarCardapios
     // editar,
     // deletar
 }

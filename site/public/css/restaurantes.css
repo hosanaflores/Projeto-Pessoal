@@ -208,6 +208,7 @@ h2{
     position: absolute;
     right: 3px;
     top: 2px;
+    z-index: 99;
 }
 
 .botao-modal{
@@ -216,6 +217,36 @@ h2{
     color: white;
 }
 
+
+/*CONTEÚDO DO MODAL*/
+.conteudo-pratos{
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.nomePrato,
+.tipo, .preco{
+    margin-top: 25px;
+}
+
+.preco, .cardapio{ /*Dentro do modal*/
+    color: #4DAF00;
+}
+
+.titulo{ /*Nome do restaurante*/
+    color: #4DAF00;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.conteudo-modal > img{ /*O > significa que eu quero a filha (ta dentro da div conteudo-modal)*/
+    position: absolute; /*nada muda ela*/
+    right: 0;
+    height: 100%;
+    top: 0;
+}
 
 /*ANIMAÇÃOM DOS CARDS DOS RESTAURANTES*/
 @keyframes animacao-card {

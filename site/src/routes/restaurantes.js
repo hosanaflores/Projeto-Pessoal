@@ -10,14 +10,12 @@ router.post("/cadastrar/:fkCardapio", function (req, res) {
 });
 
 
-
-
-
 /* ----------------------------------------------------------- */
 
-router.get("/buscarRestaurantes/", function (req, res) {
+router.get("/buscarRestaurantes/", function (req, res) { //Buscando restaurante pra mostrar no card (rotas)
   restaurantesController.buscarRestaurantes(req, res);
 });
+
 
 
 module.exports = router;

@@ -19,6 +19,13 @@ router.post("/cadastrar/:fkRestaurante", function (req, res) {
     cardapioController.cadastrar(req, res);
 });
 
+
+
+router.get("/buscarCardapios/:fkRestaurante", function (req, res) { //Buscando nome dos MENU(CARDAPIOS) dos restaurantes (rotas)
+    cardapioController.buscarCardapios(req, res);
+  });
+  
+
 // router.put("/editar/:idcardapio", function (req, res) {
 //     cardapioController.editar(req, res);
 // });

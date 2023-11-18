@@ -20,7 +20,7 @@ function listar() {
                 </div>
     
             </div>
-                <button  onclick="verCardapio()" class="botao-estilo">Veja Cardápio</button>
+                <button onclick="listarCardapio(${restauranteAtual.idRestaurante}), verCardapio(), setTimeout(() => listarPratos(${restauranteAtual.idRestaurante}), 100)" class="botao-estilo">Veja Cardápio</button>
             </div>
             
             `;
@@ -36,6 +36,7 @@ function listar() {
         console.log(`#ERRO: ${resposta}`);
       });
       
+
   //   fetch(`/restaurantes/buscarRestaurantes/`, {
   //     method: "GET", //pegar
   //   })

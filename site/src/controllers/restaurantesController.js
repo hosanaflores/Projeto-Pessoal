@@ -1,13 +1,14 @@
 var restaurantesModel = require("../models/restaurantesModel");
 
+
+
 function buscarRestaurantes(req, res) {
   
     restaurantesModel.buscarRestaurantes().then((resultado) => {
       res.status(200).json(resultado);
     });
   }
-  
-  
+
   
   module.exports = {
       // listar,
@@ -17,6 +18,7 @@ function buscarRestaurantes(req, res) {
       // editar,
       // deletar
       // buscarPorNome,
-      buscarRestaurantes
+      buscarRestaurantes,
+      // buscarCardapioPratos
   
   }
