@@ -15,7 +15,7 @@ var cardapioController = require("../controllers/cardapioController");
 //     cardapioController.pesquisarDescricao(req, res);
 // });
 
-router.post("/cadastrar/:fkRestaurante", function (req, res) {
+router.post("/cadastrar/:fkRestaurante", function (req, res) { //CADASTRANDO COM FK
     cardapioController.cadastrar(req, res);
 });
 

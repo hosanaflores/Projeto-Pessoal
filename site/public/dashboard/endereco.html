@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardapio</title>
+
+    <link rel="stylesheet" href="../css/endereco.css">
+
+    <script src="../js/dashboard-sessao.js"></script>
+    <script src="../js/validacaoCep.js"></script>
+    <script src="../js/endereco-sessao.js"></script>
+    
+</head>
+<body onload="validarSessao()">
+
+    <div class="menu-lateral">
+        <div class="titulo">
+            <h4>Olá, <span id="mensagem_usuario"> ! </span></h4>
+        </div>
+        <div class="navbar">
+    <ul>
+        <li><a href="./endereco.html" class="borda">Endereço</a></li>
+        <li><a href="../dashboard/dashboard.html" class="borda">Dashboard</a></li>
+        <li><a href="./cardapio.html" class="borda">Cardápio</a></li>
+        <li><a href="./pratos.html" class="borda">Pratos</a></li>
+        <li><a onclick="limparSessao()" class="borda">Sair</a></li>
+    </ul>
+        </div>
+    </div>
+
+
+   <!--FORMULÁRIO-->
+    <div class="container-pratos">
+
+        <div class="formulario-pratos">
+            
+           <span>Endereço</span>
+   
+            <div class="campo">
+                <label for="cep">CEP</label> <!--onblur quando clico fora-->
+                <input onblur="pesquisacep(this.value);" type="text" id="cep" name="cep" placeholder="01234-567" maxlength="8" required>
+            </div>
+
+
+            <div class="campo">
+                <label for="rua">Rua</label>
+                <input type="text" id="rua" name="rua" placeholder="Rua Haddock Lobo" maxlength="15" required>
+            </div>
+
+
+            <div class="campo">
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" name="bairro" placeholder="Paulista Pernambucanas" maxlength="15" required>
+            </div>
+
+            <div class="campo">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade" placeholder="São Paulo" maxlength="15" required>
+            </div>
+
+            <div class="campo">
+                <label for="estado">Estado</label>
+                <input type="text" id="uf" name="estado" placeholder="SP" maxlength="15" required>
+            </div>
+            
+
+            <!-- Botão de Envio -->
+            <div class="campo">
+                <button onclick="cadastrar()" class="btnCadastrar">Cadastrar</button>
+            </div>
+        </div>
+        <div id="div_mensagem"></div>
+        
+    </div>    
+
+</body>
+</html>

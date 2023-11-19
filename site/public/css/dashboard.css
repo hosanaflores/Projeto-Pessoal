@@ -71,3 +71,23 @@ li a{
     align-items: center;
     flex: 1;
 }
+
+
+/*NOME DO USUÁRIO (RESTAURANTE) LOGADO*/
+#mensagem_usuario{
+    margin-left: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white bold;
+}
+
+
+.borda{
+    padding: 10px 5px 10px 5px;
+    border-radius: 5px;
+}
+
+.borda:hover{
+    background-color: #EDEDED ;
+    color: darkgreen;
+}

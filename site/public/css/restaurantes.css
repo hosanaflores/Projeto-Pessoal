@@ -46,6 +46,37 @@ html, body{ /*formatando todo hmtl e body*/
    text-align: center;
 } 
 
+
+/*Botão voltar*/
+
+.container-botao3{
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+}
+
+.botao-restaurante3{
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    border: lightgreen;
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: darkgreen;
+    letter-spacing: 3px;
+}
+
+.container-botao3 .botao-restaurante3{
+    position: absolute;
+    top: 10px;
+}
+
+
+/*Botão VEJA*/
 .container-botao{ /*Para centralizar o botão preciso contralizar o container dele*/
     justify-content: center;
     align-items: center;
@@ -187,7 +218,7 @@ h2{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -235,6 +266,18 @@ h2{
     color: #4DAF00;
 }
 
+.cardapio{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.especialidades{ /*escrita do especialidades no modal*/
+    display: flex;
+    flex-direction: column;
+    color: #4DAF00;
+    font-size: 15px;
+}
+
 .titulo{ /*Nome do restaurante*/
     color: #4DAF00;
     font-size: 25px;
@@ -262,3 +305,55 @@ h2{
         transform: initial;
     }
 }
+
+
+/*FOOTER*/
+.footer{
+    background-color: darkgreen;
+    display: flex;
+    bottom: 0;
+    height: 25vh;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.esquerda, .direita{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    color: white;
+}
+
+.direita p, .esquerda p{
+    padding: 15px 0 0 0;
+    cursor: pointer;
+}
+
+
+.centro .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+   
+}
+
+.centro img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+
+/*
+#4DAF00 cor antiga do header, etc
+*/

@@ -1,4 +1,4 @@
-function cadastrar() {
+function cadastrar() { //CADASTRANDO COM FK
     var fkRestaurante = sessionStorage.ID_USUARIO;
     var nome = input_cardapio.value;
 
@@ -31,6 +31,8 @@ function listarCardapio(fkRestaurante) {
             meuModal.innerHTML = `
 
             <div class="conteudo-modal" id="lista_pratos">
+
+               <span class="especialidades">Especialidades</span>
 
                 <span class="cardapio">${cardapioAtual.nome}</span>
 
