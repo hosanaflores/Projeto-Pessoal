@@ -17,5 +17,4 @@ router.get("/buscarRestaurantes/", function (req, res) { //Buscando restaurante 
 });
 
 
-
 module.exports = router;

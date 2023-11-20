@@ -51,6 +51,7 @@ function cadastrar(){ //Função para cadastrar os campos
     div_senhaErrada.innerHTML = ``;
     div_confirmarErrado.innerHTML = ``;
 
+ 
     if(cnpj.indexOf('.') >= 0 && cnpj.indexOf('-') >= 0){
         input_cnpj.style.border = "0"; //Fica sem borda
     }else{
@@ -116,6 +117,32 @@ function enviar(){ //Função do botão de cadastrar
       tipoServer: tipo
         }),
     })
+
+    .then(function (resposta) { //CARD DE REDIRECIONAMENTO
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          setTimeout(() => {
+            window.location = "./login.html";
+          }, "2000");
+
+    
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+    return false;
+
 }
 
 }

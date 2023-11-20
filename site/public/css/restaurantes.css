@@ -14,7 +14,7 @@ html, body{ /*formatando todo hmtl e body*/
 
 /*BARRA DE ROLAGEM DO NAVEGADOR*/
 ::-webkit-scrollbar-track {
-    background-color:darkgreen;
+    background-color:#4DAF00;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -38,7 +38,7 @@ html, body{ /*formatando todo hmtl e body*/
 .banner .container p{ /*Paragráfo da home*/
     font-size: 40px;
     font-weight: bold;
-    background: linear-gradient(to right, darkgreen, rgb(0, 44, 0));
+    background: linear-gradient(to right, #4DAF00, rgb(0, 44, 0));
     /* -webkit-background-clip: text; Adicionando suporte para navegadores WebKit */
     /* background-clip: text; Padrão */
     color: rgb(255, 255, 255);
@@ -66,7 +66,7 @@ html, body{ /*formatando todo hmtl e body*/
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    background-color: darkgreen;
+    background-color: #4DAF00;
     letter-spacing: 3px;
 }
 
@@ -102,7 +102,7 @@ html, body{ /*formatando todo hmtl e body*/
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    background-color: darkgreen;
+    background-color: #4DAF00;
     letter-spacing: 3px;
     bottom: 0;
 
@@ -119,7 +119,7 @@ html, body{ /*formatando todo hmtl e body*/
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    background-color: darkgreen;
+    background-color: #4DAF00;
     letter-spacing: 3px;
     transform: translateX(-50%);
     animation: flutuar-botao 1s ease infinite alternate;
@@ -159,6 +159,9 @@ a{
 h2{
     margin-top: 25px;
     text-align: center;
+    color: #4DAF00;
+    text-transform: uppercase;
+    font-size: 40px;
 }
 
 /*CARDS DOS RESTAURANTES*/
@@ -183,7 +186,7 @@ h2{
     width: 400px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     height: 400px;
     margin-top: 50px;
     margin-bottom: 100px;
@@ -193,13 +196,14 @@ h2{
     padding-top: 8rem;
     animation: 0.8s ease 0s 1 normal none running animacao-card; /*animação dos cards dos restaurantes*/
     justify-content: space-between;
+    position: relative;
 }
 
 
 .botao-estilo{
     width: 400px;
     height: 3rem;
-    background: darkgreen;
+    background: #4DAF00;
     border-radius: 0px 0px 1.5rem 1.5rem; /*pontaE pontaS*/
     display: flex;
     justify-content: center;
@@ -222,6 +226,7 @@ h2{
     justify-content: center;
     align-items: center;
     width: 100%;
+    z-index: 99;
 }
 
 .conteudo-modal {
@@ -244,7 +249,7 @@ h2{
 
 .botao-modal{
     width: 25px;
-    background-color: darkgreen;
+    background-color: #4DAF00;
     color: white;
 }
 
@@ -282,6 +287,14 @@ h2{
     color: #4DAF00;
     font-size: 25px;
     text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.rua, .bairro, .cidade, /*Endereço (cards)*/
+.estado, .cep{
+    margin-top: 5px;
 }
 
 .conteudo-modal > img{ /*O > significa que eu quero a filha (ta dentro da div conteudo-modal)*/
@@ -309,7 +322,7 @@ h2{
 
 /*FOOTER*/
 .footer{
-    background-color: darkgreen;
+    background-color: #4DAF00;
     display: flex;
     bottom: 0;
     height: 25vh;

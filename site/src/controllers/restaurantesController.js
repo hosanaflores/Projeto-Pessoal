@@ -1,8 +1,6 @@
 var restaurantesModel = require("../models/restaurantesModel");
 
-
-
-function buscarRestaurantes(req, res) {
+function buscarRestaurantes(req, res) { //BUSCANDO ENDEREÇOS
   
     restaurantesModel.buscarRestaurantes().then((resultado) => {
       res.status(200).json(resultado);
@@ -11,14 +9,5 @@ function buscarRestaurantes(req, res) {
 
   
   module.exports = {
-      // listar,
-      // listarPorUsuario,
-      // pesquisarDescricao,
-      // cadastrar,
-      // editar,
-      // deletar
-      // buscarPorNome,
-      buscarRestaurantes,
-      // buscarCardapioPratos
-  
+      buscarRestaurantes
   }

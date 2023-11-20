@@ -15,6 +15,30 @@ function cadastrar() {
             precoServer: preco
         })
     })
+    .then(function (resposta) { //CARD DE REDIRECIONAMENTO
+      console.log("resposta: ", resposta);
+
+      if (resposta.ok) {
+        cardErro.style.display = "block";
+
+        mensagem_erro.innerHTML =
+          "Cadastro de Pratos realizado com sucesso!";
+
+        setTimeout(() => {
+          window.location = "./dashboard.html";
+        }, "2000");
+
+  
+      } else {
+        throw "Houve um erro ao tentar realizar o cadastro!";
+      }
+    })
+    .catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+      finalizarAguardar();
+    });
+
+  return false;
 
 }
 

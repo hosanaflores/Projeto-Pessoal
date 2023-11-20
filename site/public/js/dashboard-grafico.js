@@ -8,8 +8,8 @@ var data = {
   labels: ['Vegetariano', 'Vegano', 'Misto'],
   datasets: [{
     data: [30, 40, 30], // Substitua esses valores pelos seus dados
-    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'], // Cores das fatias
-    hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'] // Cores ao passar o mouse sobre as fatias
+    backgroundColor: ['#98FB98', '#006400', '#32CD32'] // Cores das fatias
+    // hoverBackgroundColor: ['#F5DEB3', '#F5DEB3', '#F5DEB3'] // Cores ao passar o mouse sobre as fatias
   }]
 };
 
@@ -32,11 +32,11 @@ var ctxBar = document.getElementById('myBarChart').getContext('2d');
 
 // Defina os dados do gráfico de barras
 var dataBar = {
-  labels: ['Rótulo A', 'Rótulo B', 'Rótulo C'],
+  labels: ['Vegetariano', 'Vegano', 'Misto'],
   datasets: [{
-    label: 'Nome da Série',
+    label: 'Gráfico', 
     data: [15, 25, 35], // Substitua esses valores pelos seus dados
-    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'], // Cores das barras
+    backgroundColor: ['#98FB98', '#006400', '#32CD32'], // Cores das barras
     borderWidth: 1 // Largura da borda das barras
   }]
 };

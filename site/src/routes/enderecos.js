@@ -7,4 +7,10 @@ router.post("/cadastrar/:fkRestaurante", function (req, res) { //CADASTRANDO COM
    enderecoController.cadastrar(req, res);
 });
 
+// router.get("/buscarEnderecos/:fkRestaurante", function (req, res) { //Buscando endereco nos CARDS (rotas)
+//    enderecoController.buscarEnderecos(req, res);
+//  });
+ 
+ 
+
 module.exports = router;

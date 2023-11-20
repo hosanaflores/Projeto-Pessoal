@@ -14,13 +14,17 @@ function listar() {
             
             <div class="container-card" id="teste">
             <div class="conteudo-card">
-                <div class="titulo-endereco">
-                    <span class="titulo">${restauranteAtual.nomeFantasia}</span>
-                    <span class="endereco">Rua de Vegetal de Brocólis</span>
+            <div class="titulo-endereco">
+            <span class="titulo">${restauranteAtual.nomeFantasia}</span>
+                    <span class="rua"> Rua: ${restauranteAtual.rua}</span>
+                    <span class="bairro">Bairro: ${restauranteAtual.bairro}</span>
+                    <span class="cidade">Cidade: ${restauranteAtual.cidade}</span>
+                    <span class="estado">Estado: ${restauranteAtual.estado}</span>
+                    <span class="cep">CEP: ${restauranteAtual.cep}</span>
                 </div>
     
             </div>
-                <button onclick="listarCardapio(${restauranteAtual.idRestaurante}), verCardapio(), setTimeout(() => listarPratos(${restauranteAtual.idRestaurante}), 100)" class="botao-estilo">Veja Cardápio</button>
+                <button onclick="listarCardapio(${restauranteAtual.idRestaurante}), verCardapio(), setTimeout(() => listarPratos(${restauranteAtual.idRestaurante}), 100)"class="botao-estilo">Veja Cardápio</button>
             </div>
             
             `;
@@ -36,39 +40,6 @@ function listar() {
         console.log(`#ERRO: ${resposta}`);
       });
       
-
-  //   fetch(`/restaurantes/buscarRestaurantes/`, {
-  //     method: "GET", //pegar
-  //   })
-  //     .then(function (resposta) {
-  //       resposta.json().then((cardapios) => {
-  //         cardapios.forEach((cardapio) => { //Cardapios -> Vetor que vem do banco, e o cardapio são os itens do vetor {json}
-  //           listaCardapios.innerHTML += `
-      //<option value='${cardapio.idCardapio}'>${cardapio.nome}</option>
-            
-  //           `;
-  //           console.log(cardapio);
-  //         });
-  //       });
-  //     })
-  //     .catch(function (resposta) {
-  //       console.log(`#ERRO: ${resposta}`);
-  //     });
-
-
-
-  // <div class="container-card" id="listaRestaurantes">
-  //       <div class="conteudo-card">
-  //           <div class="titulo-endereco">
-  //               <span class="titulo">1 Card</span>
-  //               <span class="endereco">Rua de Vegetal de Brocólis</span>
-  //           </div>
-
-  //       </div>
-  //           <button  onclick="verCardapio()" class="botao-estilo">Veja Cardápio</button>
-  //       </div>
-
-
   }
 
 

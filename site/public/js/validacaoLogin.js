@@ -7,12 +7,12 @@ function logar(){
 
 
     //VALIDAÇÃO DAS INPUTS
-    if(email.indexOf('@') < 0 && email.indexOf('.com') < 0){
+    if(email.indexOf('@') < 0 || email.indexOf('.') < 0){
         div_mensagem.innerHTML = `<p class="error"> Email incorreto! <br> </p>`;
     }
 
     if(senha.length < 8){
-        div_mensagem.innerHTML += `<p class="error"> Senha deve ter mais de 8 digitos! <br> </p>`;
+        div_mensagem.innerHTML = `<p class="error"> Senha deve ter mais de 8 digitos! <br> </p>`;
     }
 
 
@@ -43,7 +43,7 @@ function logar(){
 
         } else {
 
-            console.log("Houve um erro ao tentar realizar o login!");
+            // console.log("Houve um erro ao tentar realizar o login!");
             resposta.text().then(texto => {
                 console.error(texto);
             });

@@ -15,7 +15,7 @@ html, body{ /*formatando todo hmtl e body*/
 
 /*BARRA DE ROLAGEM DO NAVEGADOR*/
 ::-webkit-scrollbar-track {
-    background-color: darkgreen;
+    background-color: #4DAF00;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -26,7 +26,7 @@ html, body{ /*formatando todo hmtl e body*/
 /*BARRA DE ROLAGEM DO NAVEGADOR*/
 
 .menu-lateral {
-    background-color: darkgreen;
+    background-color: #4DAF00;
     width: 15%;
     height: 100vh;
 }
@@ -141,12 +141,12 @@ select:focus{
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: #EDEDED;
+   background-color: #ffffffee;
 }
 
 
 .formulario-pratos{
-    background-color: darkgreen;
+    background-color: #4DAF00;
     width: 70%;
     height: 70%;
     border-radius: 15px;  
@@ -174,5 +174,32 @@ select:focus{
 
 .borda:hover{
     background-color: #EDEDED ;
-    color: darkgreen;
+    color: #4DAF00;
 }
+
+
+/*POP-UP DE CADASTRO REALIZADO COM SUCESSO*/
+.alerta_erro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  
+  .card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: green 3px solid;
+    padding: 10px;
+    margin-right: 10%;
+  }
+  
+.card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+    color: #4DAF00;
+  }

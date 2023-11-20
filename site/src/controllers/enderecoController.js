@@ -1,5 +1,15 @@
 var enderecoModel = require("../models/enderecoModel");
 
+// function buscarEnderecos(req, res) { // (req, res) estou recebendo um parametro e dando um nome pra ela BUSCANDO ENDEREÇOS
+//     var fkRestaurante = req.params.fkRestaurante;
+  
+//     enderecoModel.buscarEnderecos(fkRestaurante).then((resultado) => {
+//       res.status(200).json(resultado);
+//     });
+//   }
+  
+
+
 function cadastrar(req, res) { // PARA CADASTRAR MEU CARDAPIO COM FK (idRestaurante)
     var fkRestaurante = req.params.fkRestaurante;
     var cep = req.body.cepServer;
@@ -41,4 +51,5 @@ function cadastrar(req, res) { // PARA CADASTRAR MEU CARDAPIO COM FK (idRestaura
 
 module.exports = {
     cadastrar
+    // buscarEnderecos
 }
