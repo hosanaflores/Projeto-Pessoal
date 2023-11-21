@@ -11,26 +11,46 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
    
     <script src="../js/dashboard-sessao.js"></script> <!--VALIDAÇÃO DA SESSÃO-->
+    <script src="../js/operacaoMath.js"></script> <!--VALIDAÇÃO DA SESSÃO-->
 
 
 </head>
-<body onload="validarSessao()">
+<body onload="validarSessao(), listarMath()">
     
     <div class="menu-lateral">
+
         <div class="titulo">
             <h4>Olá, <span id="mensagem_usuario"> ! </span></h4>
         </div>
+
         <div class="navbar">
-    <ul>
-        <li><a href="./endereco.html" class="borda">Endereço</a></li>
-        <li><a href="#" class="borda">Dashboard</a></li>
-        <li><a href="./cardapio.html" class="borda">Cardápio</a></li>
-        <li><a href="./pratos.html" class="borda">Pratos</a></li>
-        <li><a onclick="limparSessao()" class="borda">Sair</a></li>
-    </ul>
+            <ul>
+                <li><a href="./endereco.html" class="borda">Endereço</a></li>
+                <li><a href="#" class="borda">Dashboard</a></li>
+                <li><a href="./cardapio.html" class="borda">Cardápio</a></li>
+                <li><a href="./pratos.html" class="borda">Pratos</a></li>
+                <li><a onclick="limparSessao()" class="borda">Sair</a></li>
+            </ul>
         </div>
+        
     </div>
 
+    <!-- TABELA DA OPERAÇÃO MAETAMÁTICA -->
+    <table border="1" class="tabela-matematica" id="tabela_matematica">
+        <!-- <tr>
+            <th>Restaurantes</th>
+            <th>Vegetariano</th>
+            <th>Vegano</th>
+            <th>Misto</th>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <td>77.77 %</td>
+            <td>11.11 %</td>
+            <td>11.11 %</td>
+        </tr> -->
+    </table>
+        
 
     <div class="engloba-graficos">
 

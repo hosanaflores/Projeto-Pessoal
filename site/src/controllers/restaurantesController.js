@@ -7,7 +7,14 @@ function buscarRestaurantes(req, res) { //BUSCANDO ENDEREÇOS
     });
   }
 
+  function operacaoMath(req, res){
+
+    restaurantesModel.operacaoMath().then((resultado) => {
+      res.status(200).json(resultado);
+    });
+  }
   
   module.exports = {
-      buscarRestaurantes
+      buscarRestaurantes,
+      operacaoMath
   }

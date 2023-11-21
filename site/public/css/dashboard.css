@@ -70,6 +70,7 @@ li a{
     justify-content: space-around;
     align-items: center;
     flex: 1;
+    margin-top: 15%;
 }
 
 
@@ -91,3 +92,42 @@ li a{
     background-color: #EDEDED ;
     color: #4DAF00;
 }
+
+
+/*TABELA DE OPERAÇÃO MATEMÁTICA*/
+.tabela-matematica{
+    display: flex;
+    position: fixed;
+    left: 25%; /*50% da posição fixed*/
+    top: 25px;
+    border-radius: 5px;
+    border: groove;
+}
+
+.tabela-matematica th{
+    width: 250px;
+    background-color: #4DAF00;
+    color: white;
+    border-radius: 5px;
+}
+
+.tabela-matematica tr{
+    height: 50px;
+    text-align: center;
+}
+td{
+    border-radius: 5px;
+}
+/* th:nth-child(1) {
+    color: #006400;
+}
+th:nth-child(2){
+    background-color: #98FB98
+}
+th:nth-child(3){
+    background-color: #006400;
+}
+
+th:nth-child(4){
+    background-color: #32CD32;
+} */

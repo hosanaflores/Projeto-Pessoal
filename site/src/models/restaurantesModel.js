@@ -11,7 +11,15 @@ function buscarRestaurantes() { // SELECT DO BANCO PARA TRAZER O NOME DOS RESTAU
   
     return database.executar(query);
   }
+
+
+  function operacaoMath(){
+     var matematica = `SELECT * FROM Restaurante;`;
+     return database.executar(matematica);
+
+  }
   
   module.exports = {
-       buscarRestaurantes
+       buscarRestaurantes,
+       operacaoMath
   }

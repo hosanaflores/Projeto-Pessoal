@@ -13,13 +13,5 @@ router.post("/cadastrar/:fkCardapio", function (req, res) { //Cadastrando pratos
 router.get("/buscarPratos/:fkCardapio", function (req, res) { //Buscando nome dos MENU(CARDAPIOS) dos restaurantes (rotas)
     pratosController.buscarPratos(req, res);
   });
-  
-
-/* ----------------------------------------------------------- */
-
-// router.get("/buscarCardapioPorId/:idRestaurante", function (req, res) {
-//   pratosController.buscarCardapioPorId(req, res);
-// });
-
 
 module.exports = router;

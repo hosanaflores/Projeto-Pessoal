@@ -10,7 +10,6 @@
 </head>
 <body>
     
-    
     <div class="alerta_erro">
         <div class="card_erro" id="cardErro">
           <span id="mensagem_erro"></span>
@@ -19,17 +18,13 @@
     
     <div class="container-cadastro">
 
-
         <div class="formulario-cadastro">
             
-             
-
            <span>Cadastro de Restaurantes</span>
 
         <div class="cnpjTelefone">
 
                <!--Campo de CNPJ-->
-
             <div class="campo">
                 <label for="input_cnpj">CNPJ</label>
                 <input oninput="cadastrar()" type="text" id="input_cnpj" name="cnpj" placeholder="CNPJ" maxlength="14" required>
@@ -75,7 +70,7 @@
             <!-- Campo de Email -->
             <div class="campo">
                 <label for="input_email">E-mail</label>
-                <input oninput="cadastrar()" type="email" id="input_email" name="email" placeholder="E-mail" maxlength="20" required>
+                <input oninput="cadastrar()" type="email" id="input_email" name="email" placeholder="E-mail" maxlength="30" required>
                 <div id="div_email"></div> 
                 <div id="div_emailErrado"></div>
             </div class="campo">
@@ -101,8 +96,8 @@
             <!--Tipo do restaurante-->
             <div class="campo">
                 <label for="tipos">Escolha seu tipo de Restaurante:</label>
-                    <select id="select_tipo" name="tipos">
-                        <option value="vegetariano" selected>Vegetariano</option>
+                    <select oninput="cadastrar()" id="select_tipo" name="tipos">
+                        <option value="vegetariano">Vegetariano</option>
                         <option value="vegano">Vegano</option>
                         <option value="misto">Vegano e Vegetariano</option>
                     </select>
@@ -113,6 +108,7 @@
                 <button onclick="enviar()" class="btnCadastrar">Cadastrar</button>
                 <!-- <div id="div_mensagem"></div> -->
             </div>
+
           </div>
 
         <div class="container-imagem">
@@ -122,7 +118,6 @@
         </div>
        
     </div> 
-
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 var database = require("../database/config")
- //LOGIN
-function autenticar(email, senha) {
+ 
+function autenticar(email, senha) { //LOGIN
     var instrucao = `
         SELECT idRestaurante, cnpj, telefone, nomeFantasia, razaoSocial, email, senha, tipo FROM Restaurante WHERE email = '${email}' AND senha = '${senha}';
     `;
@@ -9,7 +9,6 @@ function autenticar(email, senha) {
 }
 
 //CADASTRO
-
 // Coloque os mesmos parâmetros aqui. Vá para a var instrucao
 function enviar(cnpj, telefone, nome, razao, email, senha, tipo) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores

@@ -8,8 +8,6 @@ function buscarPratos(req, res) { // (req, res) estou recebendo um parametro e d
     });
   }
 
-
-
 function cadastrar(req, res) {
     var fkCardapio = req.params.fkCardapio;
     var nomePrato = req.body.nomeServer;
@@ -41,29 +39,7 @@ function cadastrar(req, res) {
     }
 }
 
-
-
-/* -------------------------------------------------------------------------------- */
-
-// function buscarCardapioPorId(req, res) {
-//   var idRestaurante = req.params.idRestaurante;
-
-//   pratosModel.buscarCardapioPorId(idRestaurante).then((resultado) => {
-//     res.status(200).json(resultado);
-//   });
-// }
-
-
-
 module.exports = {
-    // listar,
-    // listarPorUsuario,
-    // pesquisarDescricao,
     cadastrar,
     buscarPratos
-    // editar,
-    // deletar
-    // buscarPorNome,
-    // buscarCardapioPorId
-
 }

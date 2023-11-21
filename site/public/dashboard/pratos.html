@@ -13,18 +13,21 @@
 <body onload="validarSessao()">
 
     <div class="menu-lateral">
+
         <div class="titulo">
             <h4>Olá, <span id="mensagem_usuario"> ! </span></h4>
         </div>
+
         <div class="navbar">
-    <ul>
-        <li><a href="./endereco.html" class="borda">Endereço</a></li>
-        <li><a href="../dashboard/dashboard.html" class="borda">Dashboard</a></li>
-        <li><a href="./cardapio.html" class="borda">Cardápio</a></li>
-        <li><a href="./pratos.html" class="borda">Pratos</a></li>
-        <li><a onclick="limparSessao()" class="borda">Sair</a></li>
-    </ul>
+            <ul>
+                <li><a href="./endereco.html" class="borda">Endereço</a></li>
+                <li><a href="../dashboard/dashboard.html" class="borda">Dashboard</a></li>
+                <li><a href="./cardapio.html" class="borda">Cardápio</a></li>
+                <li><a href="./pratos.html" class="borda">Pratos</a></li>
+                <li><a onclick="limparSessao()" class="borda">Sair</a></li>
+            </ul>
         </div>
+
     </div>
 
 
@@ -38,16 +41,8 @@
           </div>
 
         <div class="formulario-pratos">
-            
            <span>Prato</span>
            
-           <!-- <div class="campo">
-            <span>Cardápio:</span>
-            <select name="cardapios" id="listaCardapios">
-              <option selected>Selecione um Cardápio</option>
-            </select>
-          </div> -->
-
             <!-- Campo de pratos -->
             <div class="campo">
                 <label for="pratos">Nome do prato</label>
@@ -55,7 +50,6 @@
             </div>
 
               
-            
             <div class="campo">
                 <label for="pratos">Preço</label>
                 <input type="number" id="input_preco" name="pratos" placeholder="12.50" maxlength="3" required>
@@ -80,6 +74,7 @@
                 <button onclick="cadastrar()" class="btnCadastrar">Cadastrar</button>
             </div>
         </div>
+        
         <div id="div_mensagem"></div>
         
     </div>    
