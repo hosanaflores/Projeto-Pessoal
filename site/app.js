@@ -17,6 +17,7 @@ var empresasRouter = require("./src/routes/empresas");
 var pratosRouter = require("./src/routes/pratos");
 var restaurantesRouter = require("./src/routes/restaurantes");
 var enderecosRouter = require("./src/routes/enderecos");
+var graficosRouter = require("./src/routes/graficos");
 
 
 
@@ -35,6 +36,7 @@ app.use("/empresas", empresasRouter);
 app.use("/pratos", pratosRouter);
 app.use("/restaurantes", restaurantesRouter);
 app.use("/enderecos", enderecosRouter);
+app.use("/graficos", graficosRouter);
 
 app.listen(PORTA, function () {
     console.log(`Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar: http://localhost:${PORTA} \n

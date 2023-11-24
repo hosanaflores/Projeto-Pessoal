@@ -11,11 +11,14 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
    
     <script src="../js/dashboard-sessao.js"></script> <!--VALIDAÇÃO DA SESSÃO-->
-    <script src="../js/operacaoMath.js"></script> <!--VALIDAÇÃO DA SESSÃO-->
+    
+    <script src="../js/operacaoMath.js"></script> <!--VALIDAÇÃO DA MATEMÁTICA-->
+
+    <script src="../js/graficos-sessao.js"></script>
 
 
 </head>
-<body onload="validarSessao(), listarMath()">
+<body onload="validarSessao(), listarMath(), listarPratosBarras(), listarPrecos()">
     
     <div class="menu-lateral">
 
@@ -37,18 +40,7 @@
 
     <!-- TABELA DA OPERAÇÃO MAETAMÁTICA -->
     <table border="1" class="tabela-matematica" id="tabela_matematica">
-        <!-- <tr>
-            <th>Restaurantes</th>
-            <th>Vegetariano</th>
-            <th>Vegano</th>
-            <th>Misto</th>
-        </tr>
-        <tr>
-            <th>Total</th>
-            <td>77.77 %</td>
-            <td>11.11 %</td>
-            <td>11.11 %</td>
-        </tr> -->
+    
     </table>
         
 
@@ -56,7 +48,7 @@
 
         <!--Este é o local onde o gráfico será desenhado (DONUT)-->
         <div class="container">
-          <canvas id="myDonutChart" width="400" height="400"></canvas>
+          <canvas id="myBarChart1" width="400" height="400"></canvas>
         </div>
 
 

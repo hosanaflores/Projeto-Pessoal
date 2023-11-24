@@ -64,7 +64,6 @@ li a{
 
 
 /*ÁREA DE GRÁFICOS*/
-
 .engloba-graficos{ /*CENTRALIZANDO OS GRÁFICOS*/
     display: flex;
     justify-content: space-around;

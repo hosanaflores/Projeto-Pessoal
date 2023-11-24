@@ -1,42 +1,55 @@
-/* GRÁFICO DE DONUT*/
+/*GRÁFICO DE BARRAS 1 */
+var ctxBar1 = document.getElementById('myBarChart1').getContext('2d');
 
-// Obtenha o contexto do canvas
-var ctx = document.getElementById('myDonutChart').getContext('2d');
-
-// Defina os dados do gráfico
-var data = {
-  labels: ['Vegetariano', 'Vegano', 'Misto'],
+// Defina os dados do gráfico de barras
+var dataBar1 = {
+  labels: ['Mínimo', 'Médio', 'Máximo'],
   datasets: [{
-    data: [30, 40, 30], // Substitua esses valores pelos seus dados
-    backgroundColor: ['#98FB98', '#006400', '#32CD32'] // Cores das fatias
-    // hoverBackgroundColor: ['#F5DEB3', '#F5DEB3', '#F5DEB3'] // Cores ao passar o mouse sobre as fatias
+    label: 'Preço dos Pratos', 
+    data: [], // Substitua esses valores pelos seus dados
+    backgroundColor: ['rgba(220,220,220)',
+                      'rgba(192,192,192)',
+                      'rgba(128,128,128)'], // Cores das barras
+                      
+    borderColor: [
+                  '#4DAF00'
+                ],
+    borderWidth: 2 // Largura da borda das barras
   }]
 };
 
-// Configure as opções do gráfico
-var options = {
-  cutoutPercentage: 50, // Porcentagem do buraco no meio do donut
-  responsive: false, // Tornar o gráfico não responsivo (pode ajustar conforme necessário)
+// Configure as opções do gráfico de barras
+var optionsBar1 = {
+  scales: {
+    y: {
+      beginAtZero: true // Comece o eixo Y a partir do zero
+    }
+  },
+  responsive: false // Tornar o gráfico não responsivo (pode ajustar conforme necessário)
 };
 
-// Crie o gráfico donut
-var myDonutChart = new Chart(ctx, {
-  type: 'doughnut',
-  data: data,
-  options: options
+// Crie o gráfico de barras
+var myBarChart1 = new Chart(ctxBar1, {
+  type: 'bar',
+  data: dataBar1,
+  options: optionsBar1
 });
 
 
-/*GRÁFICO DE BARRAS*/
+
+
+
+
+/*GRÁFICO DE BARRAS 2 */
 var ctxBar = document.getElementById('myBarChart').getContext('2d');
 
 // Defina os dados do gráfico de barras
 var dataBar = {
-  labels: ['Vegetariano', 'Vegano', 'Misto'],
+  labels: [],
   datasets: [{
-    label: 'Gráfico', 
-    data: [15, 25, 35], // Substitua esses valores pelos seus dados
-    backgroundColor: ['#98FB98', '#006400', '#32CD32'], // Cores das barras
+    label: 'Tipos de Pratos', 
+    data: [], // Substitua esses valores pelos seus dados
+    backgroundColor: ['#98FB98', '#006400', '#32CD32','	#90EE90', '#00FF00', '#3CB371'], // Cores das barras
     borderWidth: 1 // Largura da borda das barras
   }]
 };
@@ -57,3 +70,4 @@ var myBarChart = new Chart(ctxBar, {
   data: dataBar,
   options: optionsBar
 });
+
