@@ -51,20 +51,3 @@ function listarMath() {
       });
       
   }
-
-
-                  // console.log(vegetariano + " quantidade de vegetarianos");
-                // console.log(vegano + " quantidade de veganos");
-                // console.log(misto + " quantidade de restaurantes mistos");
-                // console.log(tamanho + " total de cadastrados");
-
-     // console.log(resultadoVegetariano.toFixed(0) +"%");
-                // console.log(resultadoVegano.toFixed(0) +"%");
-                // console.log(resultadoMisto.toFixed(0) +"%");
-
-                // var total = (Number(resultadoVegetariano.toFixed(0)) + Number(resultadoVegano.toFixed(0)) + Number(resultadoMisto.toFixed(0)));
-                // console.log(resultadoVegetariano +  resultadoVegano + resultadoMisto);
-                // console.log(total + "%");
-
-
- 
