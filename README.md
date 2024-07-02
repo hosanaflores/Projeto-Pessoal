@@ -47,7 +47,6 @@ Neste projeto, foi desenvolvido um sistema onde restaurantes vegetarianos e vega
 
 ![image](https://github.com/hosanaflores/Projeto-Pessoal/assets/142756667/73c09815-1125-4828-8a58-9f120ef9fa99)
 
-![image](https://github.com/hosanaflores/Projeto-Pessoal/assets/142756667/7197b32d-21b1-45d8-88f7-2ac2c347d296)
 
 
 ### 🔍 Encontre 
