@@ -8,6 +8,7 @@ body {
     display: flex;
     background-color: #ffffffee;
 }
+
 html, body{ /*formatando todo hmtl e body*/
     height: 100%;
     font-family: 'Poppins', sans-serif;
@@ -48,10 +49,17 @@ h4 {
     padding: 25px;
 }
 
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+}
+
 li {
     text-decoration: none;
     list-style-type: none;
-    padding: 40px;
+    padding: 15px;
 }
 
 li a{
@@ -69,7 +77,7 @@ li a{
     justify-content: space-around;
     align-items: center;
     flex: 1;
-    margin-top: 15%;
+    margin-top: 50px;
 }
 
 
@@ -94,10 +102,20 @@ li a{
 
 
 /*TABELA DE OPERAÇÃO MATEMÁTICA*/
+
+.content {
+    width: 100%;
+}
+
+.tabela {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
 .tabela-matematica{
     display: flex;
-    position: fixed;
-    left: 25%; /*50% da posição fixed*/
     top: 25px;
     border-radius: 5px;
     border: groove;

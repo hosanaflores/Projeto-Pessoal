@@ -27,7 +27,7 @@
                <!--Campo de CNPJ-->
             <div class="campo">
                 <label for="input_cnpj">CNPJ</label>
-                <input oninput="cadastrar()" type="text" id="input_cnpj" name="cnpj" placeholder="CNPJ" maxlength="14" required>
+                <input oninput="cadastrar()" type="text" id="input_cnpj" name="cnpj" placeholder="CNPJ" maxlength="18" required>
                 <div id="div_cnpj"></div> 
                 <div id="div_cnpjErrado"></div> 
             </div>
@@ -94,13 +94,13 @@
             </div>
 
             <!--Tipo do restaurante-->
-            <div class="campo">
+            <div class="campo select_tipo">
                 <label for="tipos">Escolha seu tipo de Restaurante:</label>
-                    <select oninput="cadastrar()" id="select_tipo" name="tipos">
-                        <option value="vegetariano">Vegetariano</option>
-                        <option value="vegano">Vegano</option>
-                        <option value="misto">Vegano e Vegetariano</option>
-                    </select>
+                <select oninput="cadastrar()" id="select_tipo" name="tipos">
+                    <option value="vegetariano">Vegetariano</option>
+                    <option value="vegano">Vegano</option>
+                    <option value="misto">Vegano e Vegetariano</option>
+                </select>
             </div>
 
             <!-- Botão de Envio -->

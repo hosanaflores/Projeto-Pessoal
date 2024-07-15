@@ -1,223 +1,740 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-} /*Tirando toda formatação base*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} 
 
-html, body{ /*formatando todo hmtl e body*/
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
 }
 
-body{
-    background-image: url("../assets/imagens/linhas1.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+  background-image: url("../assets/imagens/linhas1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.container-cadastro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-    width: 100%;
-    animation: trocaDeTela 1s ease;
-    /* border: darkgreen solid 2px; */
+.container-cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+  animation: trocaDeTela 1s ease;
 }
 
-.formulario-cadastro{
-    background-color: #4DAF00;
-    width: 40%;
-    height: 99%;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.422);
+.formulario-cadastro {
+  background-color: #4daf00;
+  width: 40%;
+  height: 99%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.422);
 }
 
-span{
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: white;
-    text-transform: uppercase;
-    font-size: 20px;
+span {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
 }
 
-label{
-    color: white;
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 1rem; /*equivale a 16px*/
+label {
+  color: white;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1rem; /*equivale a 16px*/
 }
 
-.btnCadastrar{
-    display: block;
-    margin-top: 25px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: all .4s ease-in-out;
-    height: 30px;
+.btnCadastrar {
+  display: block;
+  margin-top: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+  height: 30px;
 }
 
-.btnCadastrar:hover{
-    background-color: rgb(196, 255, 196);
+.btnCadastrar:hover {
+  background-color: rgb(196, 255, 196);
 }
 
-input, select{
-    border-radius: 5px;
-    border: none;
-    height: 25px;
-    width: 250px;
-    display: block;
-    margin-top: 8px;
-    justify-content: space-between;
-    padding-left: 10px;
+input,
+select {
+  border-radius: 5px;
+  border: none;
+  height: 25px;
+  width: 250px;
+  display: block;
+  margin-top: 8px;
+  justify-content: space-between;
+  padding-left: 10px;
 }
 
-button{
-    border-radius: 5px;
-    width: 100px;
+button {
+  border-radius: 5px;
+  width: 100px;
 }
 
-input:focus, select:focus{
-    outline: none;
+input:focus,
+select:focus {
+  outline: none;
 }
 
-.container-imagem{
-   display: flex;
-   flex-direction: column;
-   height: 99%;
-   width: 40%;
-   background-color: #EDEDED;
-   border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-   justify-content: center;
-    align-items: center;
-    /* margin-left: 25px; */
-    border: #4DAF00 solid 2px;
+.container-imagem {
+  display: flex;
+  flex-direction: column;
+  height: 99%;
+  width: 40%;
+  background-color: #ededed;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  border: #4daf00 solid 2px;
 }
 
-.container-imagem img{
-    width: 400px;
-    height: 400px;
-    border-radius: 15px;
+.container-imagem img {
+  height: 300px;
+  border-radius: 15px;
 }
 
-p{
-    color: #4DAF00;
-    font-size: 20px;
-    width: 300px;
-    text-align: center;
-    margin-bottom: 5px;
+p {
+  color: #4daf00;
+  font-size: 20px;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
-a{
-    text-decoration: none;
-    color: #193a00d5;
-    text-transform: uppercase;
-    transition: all .4s ease-in-out;
-    font-weight: bold;
+a {
+  text-decoration: none;
+  color: #193a00d5;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+  font-weight: bold;
 }
 
-a:hover{
-    color: black;
+a:hover {
+  color: black;
 }
 
 @keyframes trocaDeTela {
-    0% {
-        transform: translateX(0);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-.emailSenha, 
-.nomeRazao, 
-.cnpjTelefone{ /*Deixando lado a lado as div*/
-    display: flex;
+.emailSenha,
+.nomeRazao,
+.cnpjTelefone {
+  /*Deixando lado a lado as div*/
+  display: flex;
 }
 
 #input_email,
 #input_nome,
-#input_cnpj{ /*Separando as inputs*/
-    margin-right: 5px;
+#input_cnpj {
+  margin-right: 5px;
 }
 
 #input_senha,
 #input_razaoSocial,
-#input_telefone{
-    margin-left: 5px;
+#input_telefone {
+  margin-left: 5px;
 }
-
-
 
 /*CSS DA VALIDAÇÃO DO LOGIN*/
-.success{
-    font-size: 15px;
-    color: white;
+.success {
+  font-size: 15px;
+  color: white;
 }
 
-.error{
-    font-size: 15px;
-    color: black;
+.error {
+  font-size: 15px;
+  color: black;
 }
-
 
 /*CSS DA VALIDAÇÃO DO CADASTRO*/
-#div_cnpjCerto, 
+#div_cnpjCerto,
 #div_nomeCerto,
 #div_emailCerto,
 #div_senhaCerta,
-#div_confirmarCerto{
-    color: white;
+#div_confirmarCerto {
+  color: white;
 }
 
 #div_cnpjErrado,
 #div_nomeErrado,
 #div_emailErrado,
 #div_senhaErrada,
-#div_confirmarErrado{
-    color: black;
+#div_confirmarErrado {
+  color: black;
 }
 
+.alerta_erro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
 
+.card_erro {
+  display: none;
+  background-color: #fff;
+  color: black;
+  width: 230px;
+  position: fixed;
+  border-radius: 4px;
+  border: green 3px solid;
+  padding: 10px;
+  margin-right: 10%;
+}
 
-/*POP-UP DE CADASTRO REALIZADO COM SUCESSO*/
-.alerta_erro{
+.card_erro #mensagem_erro {
+  font-weight: 500;
+  font-size: 20px;
+  color: #4daf00;
+}
+
+.select_tipo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  select {
+    text-align: center;
+  }
+
+@media (max-width: 600px) {
+  .container-cadastro {
+    width: 100%;
+    height: 95%;
+  }
+
+  .container-imagem img {
+    height: 200px;
+    border-radius: 15px;
+  }
+
+  p {
+    color: #4daf00;
+    font-size: 25px;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 2px;
+  }
+
+  .formulario-cadastro {
+    background-color: #4daf00;
+    width: 50%;
+    height: 99%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    /* top: 25px; */
+    flex-direction: column;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.422);
   }
-  
-  .card_erro {
-    display: none;
-    background-color: #fff;
-    color: black;
-    width: 230px;
-    position: fixed;
-    border-radius: 4px;
-    border: green 3px solid;
-    padding: 10px;
-    margin-right: 10%;
+
+  .emailSenha,
+  .nomeRazao,
+  .cnpjTelefone {
+    display: flex;
+    flex-direction: column;
   }
-  
-.card_erro #mensagem_erro{
-    font-weight: 500;
+
+  input,
+  select {
+    border-radius: 5px;
+    border: none;
+    height: 20px;
+    width: 150px;
+    display: block;
+    margin-top: 3px;
+    justify-content: space-between;
+    padding-left: 10px;
+  }
+
+  span {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  #input_email,
+  #input_nome,
+  #input_cnpj {
+    margin: 0;
+  }
+
+  #input_senha,
+  #input_razaoSocial,
+  #input_telefone {
+    margin: 0;
+  }
+
+  select,
+  label {
+    text-align: center;
+  }
+
+  .select_tipo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-height: 700px) {
+  .formulario-cadastro label {
     font-size: 20px;
-    color: #4DAF00;
   }
+
+  input {
+    font-size: 17px;
+    width: 170px;
+  }
+
+  p {
+    font-size: 25px;
+  }
+
+  select {
+    width: 170px;
+    font-size: 17px;
+  }
+
+  .btnCadastrar {
+    display: block;
+    margin-top: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+    height: 30px;
+    width: 150px;
+    font-weight: bold;
+    font-size: 17px;
+  }
+
+  span {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .login {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 850px) {
+  .container-cadastro {
+    width: 100%;
+    height: 95%;
+  }
+
+  .container-imagem img {
+    height: 200px;
+    border-radius: 15px;
+  }
+
+  p {
+    color: #4daf00;
+    font-size: 25px;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 2px;
+  }
+
+  .formulario-cadastro {
+    background-color: #4daf00;
+    width: 50%;
+    height: 99%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.422);
+  }
+
+  .emailSenha,
+  .nomeRazao,
+  .cnpjTelefone {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input,
+  select {
+    border-radius: 5px;
+    border: none;
+    height: 20px;
+    width: 180px;
+    display: block;
+    margin-top: 3px;
+    justify-content: space-between;
+    padding-left: 10px;
+  }
+
+  span {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  #input_email,
+  #input_nome,
+  #input_cnpj {
+    margin: 0;
+  }
+
+  #input_senha,
+  #input_razaoSocial,
+  #input_telefone {
+    margin: 0;
+  }
+
+  select,
+  label {
+    text-align: center;
+  }
+
+  .select_tipo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .container-cadastro {
+    width: 100%;
+    height: 95%;
+  }
+
+  .container-imagem img {
+    height: 200px;
+    border-radius: 15px;
+  }
+
+  p {
+    color: #4daf00;
+    font-size: 20px;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+
+  .formulario-cadastro {
+    background-color: #4daf00;
+    width: 50%;
+    height: 99%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.422);
+  }
+
+  .emailSenha,
+  .nomeRazao,
+  .cnpjTelefone {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input,
+  select {
+    border-radius: 5px;
+    border: none;
+    height: 20px;
+    width: 150px;
+    display: block;
+    margin-top: 3px;
+    justify-content: space-between;
+    padding-left: 10px;
+  }
+
+  span {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #input_email,
+  #input_nome,
+  #input_cnpj {
+    margin: 0;
+  }
+
+  #input_senha,
+  #input_razaoSocial,
+  #input_telefone {
+    margin: 0;
+  }
+
+  select,
+  label {
+    text-align: center;
+  }
+
+  .select_tipo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .campo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .campo label {
+    width: 100%;
+    text-align: left;
+  }
+
+  .select_tipo label {
+    text-align: center !important;
+  }
+}
+
+@media (min-height: 1024px) {
+  .container-cadastro {
+    width: 100%;
+    height: 95%;
+  }
+
+  .container-imagem img {
+    height: 200px;
+    border-radius: 15px;
+  }
+
+  p {
+    color: #4daf00;
+    font-size: 30px;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .formulario-cadastro {
+    background-color: #4daf00;
+    width: 50%;
+    height: 99%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.422);
+  }
+
+  .emailSenha,
+  .nomeRazao,
+  .cnpjTelefone {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input,
+  select {
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    width: 275px;
+    display: block;
+    margin-top: 3px;
+    justify-content: space-between;
+    padding-left: 10px;
+    font-size: 20px;
+  }
+
+  span {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  #input_email,
+  #input_nome,
+  #input_cnpj {
+    margin: 0;
+  }
+
+  #input_senha,
+  #input_razaoSocial,
+  #input_telefone {
+    margin: 0;
+  }
+
+  select,
+  label {
+    text-align: center;
+  }
+
+  .select_tipo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .select_tipo label {
+    text-align: center !important;
+  }
+
+  .campo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .campo label {
+    width: 100%;
+    text-align: left;
+    font-size: 25px;
+  }
+
+  .btnCadastrar {
+    display: block;
+    margin-top: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+    height: 35px;
+    width: 175px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+@media (min-height: 1280px) and (max-width: 1280px) {
+  .campo label {
+    width: 100%;
+    text-align: left;
+    font-size: 35px;
+  }
+  input,
+  select {
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    width: 400px;
+    display: block;
+    margin-top: 3px;
+    justify-content: space-between;
+    padding-left: 10px;
+    font-size: 25px;
+  }
+  span {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 35px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 850px) {
+  .btnCadastrar {
+    display: block;
+    margin-top: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+    height: 50px;
+    width: 175px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1024px) and (max-height: 800px) {
+  .btnCadastrar {
+    display: block;
+    margin-top: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+    height: 30px;
+    width: 150px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) and (max-height: 768px) {
+  input,
+  select {
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    width: 190px;
+    display: block;
+    margin-top: 8px;
+    justify-content: space-between;
+    padding-left: 10px;
+  }
+
+  select {
+    text-align: center;
+  }
+
+  .select_tipo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
