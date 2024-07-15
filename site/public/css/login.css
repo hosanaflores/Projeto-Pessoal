@@ -1,199 +1,367 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-} /*Tirando toda formatação base*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} 
 
-html, body{ /*formatando todo hmtl e body*/
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
 }
 
-body{
-    background-image: url("../assets/imagens/linhas1.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
+body {
+  background-image: url("../assets/imagens/linhas1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
 }
 
-.container-login{
+.container-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  animation: trocaDeTela 1s ease; /*fazer a animação funcionar... o ease é o jeito que a animação aparece*/
+}
+
+.formulario-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+span {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+label {
+  color: white;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1rem; /*equivale a 16px*/
+}
+
+.btnLogar {
+  display: block;
+  margin-top: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+  height: 30px;
+}
+
+.btnLogar:hover {
+  background-color: rgb(196, 255, 196);
+}
+
+button,
+input {
+  border-radius: 5px;
+  border: none;
+  height: 25px;
+  width: 250px;
+  display: block;
+  margin-top: 8px;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+button {
+  margin-bottom: 25px; /*Para dar distância da mensagem de validação do button*/
+  padding: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.container-imagem {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 45%;
+  background-color: #ededed;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  border: #4daf00 solid 2px;
+}
+
+.container-imagem img {
+  height: 400px;
+  border-radius: 15px;
+}
+
+p {
+  color: #4daf00;
+  font-size: 20px;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #193a00d5;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+  font-weight: bold;
+}
+
+a:hover {
+  color: black;
+}
+
+@keyframes trocaDeTela {
+  /*nome do meu keyframes*/
+  0% {
+    /*ta começando do 0*/
+    transform: translateX(-120px); /*ele move o container pra esquerda*/
+    opacity: 0; /*começa transparente */
+  }
+  100% {
+    /*Até onde quero que vá*/
+    transform: translateX(0); /*move o container até a posição original dele*/
+    opacity: 1; /*fica vísivel*/
+  }
+}
+
+/*CSS DA VALIDAÇÃO*/
+.success {
+  font-size: 15px;
+  color: white;
+}
+
+.error {
+  font-size: 15px;
+  color: white;
+}
+
+.background-login {
+  background-color: #4daf00;
+  width: 45%;
+  height: 70%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.422);
+  position: relative;
+}
+
+#div_mensagem {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*POP-UP DE CADASTRO REALIZADO COM SUCESSO*/
+.alerta_erro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.card_erro {
+  display: none;
+  background-color: #fff;
+  color: black;
+  width: 230px;
+  position: fixed;
+  border-radius: 4px;
+  border: green 3px solid;
+  padding: 10px;
+  margin-right: 10%;
+}
+
+.card_erro #mensagem_erro {
+  font-weight: 500;
+  font-size: 20px;
+  color: #4daf00;
+}
+
+
+
+@media (max-width: 600px) {
+  .container-login {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    animation: trocaDeTela 1s ease; /*fazer a animação funcionar... o ease é o jeito que a animação aparece*/
-    /* border: darkgreen solid 2px; */
+    width: 100%;
+    animation: trocaDeTela 1s ease;
 }
 
-.formulario-login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    position: relative;
-}
+  img {
+    height: 200px !important;
+  }
 
-span{
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: white;
-    text-transform: uppercase;
+  p {
+    font-size: 25px;
+    width: 75%;
+  }
+
+  a {
+    font-size: 25px;
+  }
+
+  input {
+    width: 150px;
+    height: 35px;
     font-size: 20px;
-}
+  }
 
-label{
-    color: white;
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 1rem; /*equivale a 16px*/
-}
+  span  {
+    font-size: 35px;
+  }
 
-.btnLogar{
+  label {
+    font-size: 25px;
+  }
+
+  .btnLogar {
     display: block;
     margin-top: 25px;
     cursor: pointer;
     text-transform: uppercase;
-    transition: all .4s ease-in-out;
-    height: 30px;
-}
-
-.btnLogar:hover{
-    background-color: rgb(196, 255, 196);
-}
-
-button, input{
-    border-radius: 5px;
-    border: none;
-    height: 25px;
-    width: 250px;
-    display: block;
-    margin-top: 8px;
-    justify-content: space-between;
-    padding-left: 10px;
-}
-
-button{
-    margin-bottom: 25px; /*Para dar distância da mensagem de validação do button*/
-}
-
-input:focus{
-    outline: none;
-}
-
-.container-imagem{
-   display: flex;
-   flex-direction: column;
-   height: 70%;
-   width: 30%;
-   background-color: #EDEDED;
-   border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-   justify-content: center;
-    align-items: center;
-    /* margin-left: 25px; */
-    border: #4DAF00 solid 2px;
-}
-
-.container-imagem img{
-    /* width: 400px; */
-    height: 300px;
-    border-radius: 15px;
-}
-
-p{
-    color: #4DAF00;
-    font-size: 20px;
-    width: 300px;
+    transition: all 0.4s ease-in-out;
+    height: 35px;
+    width: 100px;
     text-align: center;
-    margin-bottom: 5px;
-}
-
-a{
-    text-decoration: none;
-    color: #193a00d5;
-    text-transform: uppercase;
-    transition: all .4s ease-in-out;
     font-weight: bold;
-}
-
-a:hover{
-    color: black;
-}
-
-
-@keyframes trocaDeTela { /*nome do meu keyframes*/
-    0% {  /*ta começando do 0*/
-        transform: translateX(-120px); /*ele move o container pra esquerda*/
-        opacity: 0; /*começa transparente */
-    }
-    100% { /*Até onde quero que vá*/
-        transform: translateX(0); /*move o container até a posição original dele*/
-        opacity: 1; /*fica vísivel*/
-    }
-
-}
-
-
-/*CSS DA VALIDAÇÃO*/
-.success{
-    font-size: 15px;
-    color: white;
-}
-
-.error{
-    font-size: 15px;
-    color: white
-}
-
-.background-login{
-    background-color: #4DAF00;
-    width: 30%;
-    height: 70%;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.422);
-    position: relative;
-}
-
-#div_mensagem{
-    position: absolute;
-    bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-/*POP-UP DE CADASTRO REALIZADO COM SUCESSO*/
-.alerta_erro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-  }
-  
-  .card_erro {
-    display: none;
-    background-color: #fff;
-    color: black;
-    width: 230px;
-    position: fixed;
-    border-radius: 4px;
-    border: green 3px solid;
-    padding: 10px;
-    margin-right: 10%;
-  }
-  
-.card_erro #mensagem_erro{
-    font-weight: 500;
     font-size: 20px;
-    color: #4DAF00;
+}
+
+}
+  
+  /* @media (min-height: 700px) {
+   
+  }
+  
+  @media (max-width: 850px) {
+   
+  }
+  
+  @media (min-width: 850px) {
+    
+  } */
+  
+  @media (min-height: 1024px) {
+    span, label {
+      font-size: 35px;
+    }
+
+    input {
+     height: 35px;
+     font-size: 20px;
+    }
+
+    .btnLogar {
+      display: block;
+      margin-top: 25px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.4s ease-in-out;
+      height: 40px;
+      width: 125px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+  }
+
+  p {
+    font-size: 25px;
+  }
+
+  a {
+    font-size: 30px;
+  }
+
+}
+  
+  /* @media (min-height: 1280px) and (max-width: 1280px) {
+  
+  }
+   */
+  
+  @media (min-width: 1024px) and (max-height: 800px) {
+    img {
+      height: 250px !important;
+    }
+
+    label {
+      font-size: 25px;
+    }
+
+    input, a {
+      font-size: 20px;
+    }
+
+    .btnLogar{
+      width: 75px;
+      font-weight: bold;
+    }
+
+  }
+  
+  @media (min-width: 1024px) and (max-height: 768px) {
+  
+  }
+
+  @media (max-width: 380px) {
+    .container-login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      animation: trocaDeTela 1s ease;
+  }
+  
+    img {
+      height: 200px !important;
+    }
+  
+    input {
+      width: 125px;
+    }
+  
+    .btnLogar {
+      display: block;
+      margin-top: 25px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.4s ease-in-out;
+      height: 30px;
+      width: 75px;
+      text-align: center;
+      font-size: 15px;
+    }
+  
+    p {
+      font-size: 15px;
+      width: 75%;
+    }
+  
+    a {
+      font-size: 20px;
+    }
+  
   }
