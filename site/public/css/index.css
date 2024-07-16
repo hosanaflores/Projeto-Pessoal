@@ -7,6 +7,7 @@
 
 html{
     overflow-y: scroll;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 14%;
 }
@@ -338,7 +339,7 @@ nav ul li a { /*Retirando meu underlino dos links da navbar e dando cor*/
     background-color: #4DAF00;
     display: flex;
     bottom: 0;
-    height: 25vh;
+    height: 26vh;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
@@ -379,7 +380,965 @@ nav ul li a { /*Retirando meu underlino dos links da navbar e dando cor*/
     margin-top: 25px;
 }
 
-
 /*
 #4DAF00 cor antiga do header, etc
 */
+
+/*Segunda navbar*/  
+.topnav {
+    display: none;
+}
+
+  
+
+  @media (max-width: 450px){
+    .topnav {
+        overflow: hidden;
+        background-color: rgba(77, 175, 0, 0.9);
+        z-index: 99;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        display: block;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 20px;
+      }
+
+      .container-botao .botao-quiz {
+        font-size: 20px;
+    }
+      
+      nav {
+        display: none;
+      }
+
+      .topnav #myLinks {
+        display: none;
+      }
+      
+      .topnav a {
+        color:  white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        display: block;
+      }
+      
+      .topnav a.icon {
+        background: #4DAF00;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      
+      .topnav a:hover {
+        background-color: #3e9000;
+        color: whitesmoke;
+      }
+      
+      .active {
+        background-color: #4DAF00;
+        color: white;
+      }
+
+      .container-vv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+      }
+
+    .title-veganismo, .paragrafo-veganismo {
+        margin-left: 0;
+    }
+    
+    .title-vegetarianismo, .paragrafo-vegetarianismo {
+         margin-left: 0;
+         margin-right: 0;
+     }
+
+    .title-vegetarianismo {
+        margin-top: 25px;
+    }
+
+    .paragrafo-veganismo, .paragrafo-vegetarianismo {
+        padding: 5px;
+        text-align: center;
+    }
+
+    .imagem-veganismo {
+        background-image: url(../assets/imagens/vegetarian.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60vh;
+        width: 100vw;
+        border-radius: 15px;
+        display: flex;
+        margin-left: 0;
+        margin-top: 25px;
+    }
+
+    .imagem-vegetarianismo{
+        background-image: url("../assets/imagens/vegan.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60vh;
+        width: 100vw;
+        border-radius: 15px;
+        display: flex;
+        margin-right: 0;
+        margin-top: 25px;
+    }
+
+    .tipos-vegetarianos {
+      flex-direction: column;
+      height: auto;
+      padding-bottom: 15px;
+    }
+
+    .area-sobre-mim {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .container-eu {
+        width: 100vw;
+        margin: 0;
+        height: auto;
+        padding: 2px;
+    }
+
+    .imagens-sobrepostas {
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagens-sobrepostas img {
+        margin-left: 0;
+        margin-top: 25px;
+        width: 100vw;
+        margin-bottom: 25px;
+    }
+
+    .imagem-cardapio {
+        display: none;
+    }
+
+    .cardapio-escrita {
+        width: 100%;
+        height: auto;
+    }
+
+    .area-cardapio {
+      margin-top: 50px;
+    }
+
+    .conteudo img {
+        padding: 0;
+    }
+
+    .title-tipos{
+        text-align: center;
+    }
+
+    .paragrafo-1, .paragrafo-2, .paragrafo-3, .paragrafo-4, .paragrafo-5 {
+        width: 85%;
+    }
+
+    .title-servico {
+        margin-top: 50px;
+    }
+
+    .banner .container p {
+      margin-top: 175px;
+    }
+
+    .conteudo {
+        margin-left: 15px;
+    }
+    .btnCardapioComp {
+        font-size: 20px;
+        width: 225px;
+        height: 35px;
+    }
+  }
+
+  @media (max-width: 380px){
+    .topnav {
+        overflow: hidden;
+        background-color: rgba(77, 175, 0, 0.9);
+        z-index: 99;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        display: block;
+      }
+      
+      nav {
+        display: none;
+      }
+
+      .topnav #myLinks {
+        display: none;
+      }
+      
+      .topnav a {
+        color:  white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+      
+      .topnav a.icon {
+        background: #4DAF00;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      
+      .topnav a:hover {
+        background-color: #3e9000;
+        color: whitesmoke;
+      }
+      
+      .active {
+        background-color: #4DAF00;
+        color: white;
+      }
+
+      .container-vv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+      }
+
+    .title-veganismo, .paragrafo-veganismo {
+        margin-left: 0;
+    }
+    
+    .title-vegetarianismo, .paragrafo-vegetarianismo {
+         margin-left: 0;
+         margin-right: 0;
+     }
+
+    .title-vegetarianismo {
+        margin-top: 25px;
+    }
+
+    .paragrafo-veganismo, .paragrafo-vegetarianismo {
+        padding: 5px;
+        text-align: center;
+    }
+
+    .imagem-veganismo {
+        background-image: url(../assets/imagens/vegetarian.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60vh;
+        width: 100vw;
+        border-radius: 15px;
+        display: flex;
+        margin-left: 0;
+        margin-top: 25px;
+    }
+
+    .imagem-vegetarianismo{
+        background-image: url("../assets/imagens/vegan.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60vh;
+        width: 100vw;
+        border-radius: 15px;
+        display: flex;
+        margin-right: 0;
+        margin-top: 25px;
+    }
+
+    .tipos-vegetarianos {
+      flex-direction: column;
+      height: auto;
+      padding-bottom: 15px;
+    }
+
+    .area-sobre-mim {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .container-eu {
+        width: 100vw;
+        margin: 0;
+        height: auto;
+        padding: 2px;
+    }
+
+    .imagens-sobrepostas {
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagens-sobrepostas img {
+        margin-left: 0;
+        margin-top: 25px;
+        width: 100vw;
+        margin-bottom: 25px;
+    }
+
+    .imagem-cardapio {
+        display: none;
+    }
+
+    .cardapio-escrita {
+        width: 100%;
+        height: auto;
+    }
+
+    .area-cardapio {
+      margin-top: 50px;
+    }
+
+    .conteudo img {
+        padding: 0;
+    }
+
+    .title-tipos{
+        text-align: center;
+    }
+
+    .paragrafo-1, .paragrafo-2, .paragrafo-3, .paragrafo-4, .paragrafo-5 {
+        width: 85%;
+    }
+
+    .title-servico {
+        margin-top: 50px;
+    }
+
+    .banner .container p {
+      margin-top: 175px;
+    }
+
+    .conteudo {
+        margin-left: 15px;
+    }
+
+    p {
+        font-size: 15px;
+      }
+
+      span {
+        font-size: 15px;
+      }
+
+      .container-botao .botao-quiz {
+        font-size: 15px;
+    }
+
+  }
+
+  @media (min-width: 540px) and (max-width: 1023px) {
+    .topnav {
+        overflow: hidden;
+        background-color: rgba(77, 175, 0, 0.9);
+        z-index: 99;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        display: block;
+      }
+      
+      nav {
+        display: none;
+      }
+
+      .topnav #myLinks {
+        display: none;
+      }
+      
+      .topnav a {
+        color:  white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+      }
+      
+      .topnav a.icon {
+        background: #4DAF00;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      
+      .topnav a:hover {
+        background-color: #3e9000;
+        color: whitesmoke;
+      }
+      
+      .active {
+        background-color: #4DAF00;
+        color: white;
+      }
+
+      .container-vv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+      }
+
+      p {
+        font-size: 22px;
+      }
+
+      span {
+        font-size: 22px;
+      }
+
+      .container-botao .botao-quiz {
+        font-size: 22px;
+    }
+
+    a, a.active {
+        font-size: 22px;
+    }
+
+    .title-veganismo, .paragrafo-veganismo {
+        margin-left: 0;
+    }
+    
+    .title-vegetarianismo, .paragrafo-vegetarianismo {
+         margin-left: 0;
+         margin-right: 0;
+     }
+
+    .title-vegetarianismo {
+        margin-top: 25px;
+    }
+
+    .paragrafo-veganismo, .paragrafo-vegetarianismo {
+        padding: 5px;
+        text-align: center;
+    }
+
+    .imagem-veganismo {
+        background-image: url(../assets/imagens/vegetarian.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60vh;
+        width: 100vw;
+        border-radius: 15px;
+        display: flex;
+        margin-left: 0;
+        margin-top: 25px;
+    }
+
+    .imagem-vegetarianismo{
+        background-image: url("../assets/imagens/vegan.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60vh;
+        width: 100vw;
+        border-radius: 15px;
+        display: flex;
+        margin-right: 0;
+        margin-top: 25px;
+    }
+
+    .tipos-vegetarianos {
+      flex-direction: column;
+      height: auto;
+      padding-bottom: 15px;
+    }
+
+    .area-sobre-mim {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .container-eu {
+        width: 100vw;
+        margin: 0;
+        height: auto;
+        padding: 2px;
+    }
+
+    .imagens-sobrepostas {
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagens-sobrepostas img {
+        margin-left: 0;
+        margin-top: 25px;
+        width: 100vw;
+        margin-bottom: 25px;
+    }
+
+    .imagem-cardapio {
+        display: none;
+    }
+
+    .cardapio-escrita {
+        width: 100%;
+        height: auto;
+    }
+
+    .area-cardapio {
+      margin-top: 50px;
+    }
+
+    .conteudo img {
+        padding: 0;
+    }
+
+    .title-tipos{
+        text-align: center;
+    }
+
+    .paragrafo-1, .paragrafo-2, .paragrafo-3, .paragrafo-4, .paragrafo-5 {
+        width: 85%;
+    }
+
+    .title-servico {
+        margin-top: 50px;
+    }
+
+    .banner .container p {
+      margin-top: 175px;
+    }
+
+    .conteudo {
+        margin-left: 15px;
+    }
+
+    .btnCardapioComp {
+        background-color: #8cc163;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        width: 150px;
+        height: 30px;
+        cursor: pointer;
+        font-size: 25px;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-height: 768px){
+    .topnav {
+        overflow: hidden;
+        background-color: rgba(77, 175, 0, 0.9);
+        z-index: 99;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        display: block;
+      }
+      
+      nav {
+        display: none;
+      }
+
+      .topnav #myLinks {
+        display: none;
+      }
+      
+      .topnav a {
+        color:  white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+      }
+      
+      .topnav a.icon {
+        background: #4DAF00;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      
+      .topnav a:hover {
+        background-color: #3e9000;
+        color: whitesmoke;
+      }
+      
+      .active {
+        background-color: #4DAF00;
+        color: white;
+      }
+
+      .container-vv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+      }
+
+      p {
+        font-size: 22px;
+      }
+
+      span {
+        font-size: 22px;
+      }
+
+      .container-botao .botao-quiz {
+        font-size: 22px;
+    }
+
+    a, a.active {
+        font-size: 22px;
+    }
+
+    .title-veganismo, .paragrafo-veganismo {
+        margin-left: 0;
+    }
+    
+    .title-vegetarianismo, .paragrafo-vegetarianismo {
+         margin-left: 0;
+         margin-right: 0;
+     }
+
+    .title-vegetarianismo {
+        margin-top: 25px;
+    }
+
+    .paragrafo-veganismo, .paragrafo-vegetarianismo {
+        padding: 5px;
+        text-align: center;
+    }
+
+    .imagem-veganismo {
+        background-image: url(../assets/imagens/vegetarian.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60vh;
+        width: 100vw;
+        border-radius: 15px;
+        display: flex;
+        margin-left: 0;
+        margin-top: 25px;
+    }
+
+    .imagem-vegetarianismo{
+        background-image: url("../assets/imagens/vegan.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60vh;
+        width: 100vw;
+        border-radius: 15px;
+        display: flex;
+        margin-right: 0;
+        margin-top: 25px;
+    }
+
+    .tipos-vegetarianos {
+      flex-direction: column;
+      height: auto;
+      padding-bottom: 15px;
+    }
+
+    .area-sobre-mim {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .container-eu {
+        width: 100vw;
+        margin: 0;
+        height: auto;
+        padding: 2px;
+    }
+
+    .imagens-sobrepostas {
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagens-sobrepostas img {
+        margin-left: 0;
+        margin-top: 25px;
+        width: 100vw;
+        margin-bottom: 25px;
+    }
+
+    .imagem-cardapio {
+        display: none;
+    }
+
+    .cardapio-escrita {
+        width: 100%;
+        height: auto;
+    }
+
+    .area-cardapio {
+      margin-top: 50px;
+    }
+
+    .conteudo img {
+        padding: 0;
+    }
+
+    .title-tipos{
+        text-align: center;
+    }
+
+    .paragrafo-1, .paragrafo-2, .paragrafo-3, .paragrafo-4, .paragrafo-5 {
+        width: 85%;
+    }
+
+    .title-servico {
+        margin-top: 50px;
+    }
+
+    .banner .container p {
+      margin-top: 175px;
+    }
+
+    .conteudo {
+        margin-left: 15px;
+    }
+
+    .btnCardapioComp {
+        background-color: #8cc163;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        width: 150px;
+        height: 30px;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    .footer {
+        height: 32vh;
+    }
+  }
+
+  @media (min-width: 1024px) and (min-height: 1280px){
+    .topnav {
+        overflow: hidden;
+        background-color: rgba(77, 175, 0, 0.9);
+        z-index: 99;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        display: block;
+      }
+      
+      nav {
+        display: none;
+      }
+
+      .topnav #myLinks {
+        display: none;
+      }
+      
+      .topnav a {
+        color:  white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+      }
+      
+      .topnav a.icon {
+        background: #4DAF00;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      
+      .topnav a:hover {
+        background-color: #3e9000;
+        color: whitesmoke;
+      }
+      
+      .active {
+        background-color: #4DAF00;
+        color: white;
+      }
+
+      .container-vv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+      }
+
+      p {
+        font-size: 22px;
+      }
+
+      span {
+        font-size: 22px;
+      }
+
+      .container-botao .botao-quiz {
+        font-size: 22px;
+    }
+
+    a, a.active {
+        font-size: 22px;
+    }
+
+    .title-veganismo, .paragrafo-veganismo {
+        margin-left: 0;
+    }
+    
+    .title-vegetarianismo, .paragrafo-vegetarianismo {
+         margin-left: 0;
+         margin-right: 0;
+     }
+
+    .title-vegetarianismo {
+        margin-top: 25px;
+    }
+
+    .paragrafo-veganismo, .paragrafo-vegetarianismo {
+        padding: 5px;
+        text-align: center;
+    }
+
+    .imagem-veganismo {
+        background-image: url(../assets/imagens/vegetarian.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60vh;
+        width: 100vw;
+        border-radius: 15px;
+        display: flex;
+        margin-left: 0;
+        margin-top: 25px;
+    }
+
+    .imagem-vegetarianismo{
+        background-image: url("../assets/imagens/vegan.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60vh;
+        width: 100vw;
+        border-radius: 15px;
+        display: flex;
+        margin-right: 0;
+        margin-top: 25px;
+    }
+
+    .tipos-vegetarianos {
+      flex-direction: column;
+      height: auto;
+      padding-bottom: 15px;
+    }
+
+    .area-sobre-mim {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .container-eu {
+        width: 100vw;
+        margin: 0;
+        height: auto;
+        padding: 2px;
+    }
+
+    .imagens-sobrepostas {
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagens-sobrepostas img {
+        margin-left: 0;
+        margin-top: 25px;
+        width: 100vw;
+        margin-bottom: 25px;
+    }
+
+    .imagem-cardapio {
+        display: none;
+    }
+
+    .cardapio-escrita {
+        width: 100%;
+        height: auto;
+    }
+
+    .area-cardapio {
+      margin-top: 50px;
+    }
+
+    .conteudo img {
+        padding: 0;
+    }
+
+    .title-tipos{
+        text-align: center;
+    }
+
+    .paragrafo-1, .paragrafo-2, .paragrafo-3, .paragrafo-4, .paragrafo-5 {
+        width: 85%;
+    }
+
+    .title-servico {
+        margin-top: 50px;
+    }
+
+    .banner .container p {
+      margin-top: 175px;
+    }
+
+    .conteudo {
+        margin-left: 15px;
+    }
+
+    .btnCardapioComp {
+        background-color: #8cc163;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        width: 325px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+    .container-botao .botao-quiz {
+        font-size: 30px;
+        height: 50px;
+    }
+
+    .container-vv p {
+        font-size: 27px;
+    }
+
+    .tipos-vegetarianos span {
+        font-size: 27px;
+    }
+
+    .sobre-mim p {
+        font-size: 30px;
+    }
+
+    .footer p {
+        font-size: 30px;
+    }
+    
+  }

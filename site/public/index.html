@@ -6,7 +6,8 @@
     <title>VivaVerde</title>
 
     <link rel="stylesheet" href="./css/index.css">
-
+    <script src="./js/hamburguer.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -14,7 +15,7 @@
     <header id="header">
         <nav>
             <h1><a href="#header">VivaVerde</a></h1>
-            <ul>
+            <ul class="nav-menu">
                 <li><a href="#diferenca">Diferença</a></li>
                 <li><a href="#tipos">Tipos</a></li>
                 <li><a href="#servico">Serviço</a></li>
@@ -22,6 +23,22 @@
                 <li><a href="./login.html">Login</a></li>
             </ul>
         </nav>
+
+        <!--Segunda navbar-->
+            <div class="topnav">
+              <a href="#home" class="active">VivaVerde</a>
+              <div id="myLinks">
+               <a href="#diferenca">Diferença</a>
+               <a href="#tipos">Tipos</a>
+               <a href="#servico">Serviço</a>
+               <a href="./cadastro.html">Cadastro</a>
+               <a href="./login.html">Login</a>
+              </div>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+
 
         <div class="banner">
             <div class="container">
@@ -153,10 +170,9 @@
                     <p>Devido as grandes dificuldades de pessoas vegetarianos a encontrar locais apropriados para comer, 
                         foi idealizado um sistema em que se  localize restaurantes com comidas veganas e vegetarianas.<br><br> 
                         A maior parte dos Fast Food’s oferecem como lanche/refeição alimentos que contenha carne.
-                         Ao sair com a família ou amigos, existe uma pequena variação de refeição para pessoas vegetarianas.
-                          Por isso, nosso sistema contará com um cadastro de restaurantes variados, com diversos cardápios,
-                           onde você poderá ver qual tipo de refeição aquele restaurante oferece.
-
+                        Ao sair com a família ou amigos, existe uma pequena variação de refeição para pessoas vegetarianas.
+                        Por isso, nosso sistema contará com um cadastro de restaurantes variados, com diversos cardápios,
+                        onde você poderá ver qual tipo de refeição aquele restaurante oferece.
                     </p>
                 </div>
             </div>
