@@ -1,322 +1,375 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    background-color: #ffffffee;
+  display: flex;
+  background-color: #ffffffee;
 }
-html, body{ /*formatando todo hmtl e body*/
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
+html,
+body {
+  /*formatando todo hmtl e body*/
+  height: 100%;
+  font-family: "Poppins", sans-serif;
 }
 
 /*BARRA DE ROLAGEM DO NAVEGADOR*/
 ::-webkit-scrollbar-track {
-    background-color: #4DAF00;
+  background-color: #4daf00;
 }
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    background: #EDEDED;
+  background: #ededed;
 }
 /*BARRA DE ROLAGEM DO NAVEGADOR*/
 
 .menu-lateral {
-    background-color: #4DAF00;
-    width: 15%;
-    height: 100vh;
+  background-color: #4daf00;
+  width: 15%;
+  height: 100vh;
 }
 
 h4 {
-    margin: 25px;
-    display: flex;
-    justify-content: center;
-    color: white;
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  color: white;
 }
 
 .navbar {
-    color: white;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    list-style-type: none;
-    align-items: center;
-    padding: 25px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  list-style-type: none;
+  align-items: center;
+  padding: 25px;
 }
 
 .navbar ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
 }
 
 li {
-    text-decoration: none;
-    list-style-type: none;
-    padding: 15px;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 15px;
 }
 
-li a{
+li a {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  cursor: pointer;
+}
+
+/*ÁREA DE FORMULÁRIO*/
+
+.container-pratos span {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+label {
+  color: white;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1rem; /*equivale a 16px*/
+}
+
+.btnCadastrar {
+  margin-top: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+  height: 30px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button,
+input {
+  border-radius: 5px;
+  border: none;
+  height: 25px;
+  width: 250px;
+  display: block;
+  margin-top: 8px;
+  justify-content: space-between;
+}
+
+button:hover {
+  background-color: rgb(196, 255, 196);
+}
+
+button {
+  margin-bottom: 25px; /*Para dar distância da mensagem de validação do button*/
+}
+
+input:focus {
+  outline: none;
+}
+
+input {
+  padding-left: 8px;
+}
+
+select {
+  border-radius: 5px;
+  border: none;
+  height: 25px;
+  width: 250px;
+  display: block;
+  margin-top: 8px;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+select:focus {
+  outline: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 99;
+  }
+  
+  .conteudo-modal {
+      background: #ededed;
+      padding: 20px;
+      border-radius: 5px;
+      width: 80%;
+      height: 80%;
+      position: relative;
+      overflow-y: auto
+    }
+  
+  .botao-modal {
+      position: absolute;
+      width: 25px;
+      background-color: #4daf00;
+      color: white;
+      right: 0;
+      top: 0;
+      margin-top: 0px;
+    }
+    
+    .botao-modal:hover {
+      background-color: #3b8800;
+    }
+
+
+  .botoes {
+      display: flex;
+      gap: 5px;
+    }
+
+.container-pratos {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffffee;
+}
+
+.pratos {
+  width: 75px;
+  background-color: #4daf00;
+  height: 35px;
+  color: #ededed;
+}
+
+.pratos:hover {
+  width: 75px;
+  background-color: #3b8800;
+  height: 35px;
+}
+
+.formulario-pratos {
+  background-color: #4daf00;
+  width: 70%;
+  height: 70%;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.422);
+}
+
+/*NOME DO USUÁRIO (RESTAURANTE) LOGADO*/
+#mensagem_usuario {
+  margin-left: 5px;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: white bold;
+}
+
+.borda {
+  padding: 10px 5px 10px 5px;
+  border-radius: 5px;
+}
+
+.borda:hover {
+  background-color: #ededed;
+  color: #4daf00;
+}
+
+/*POP-UP DE CADASTRO REALIZADO COM SUCESSO*/
+.alerta_erro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.card_erro {
+  display: none;
+  background-color: #fff;
+  color: black;
+  width: 230px;
+  position: fixed;
+  border-radius: 4px;
+  border: green 3px solid;
+  padding: 10px;
+  margin-right: 10%;
+}
+
+.card_erro #mensagem_erro {
+  font-weight: 500;
+  font-size: 20px;
+  color: #4daf00;
+}
+
+@media (max-width: 850px) {
+  .formulario-pratos {
+    background-color: #4daf00;
+    width: 90%;
+    height: 50%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.422);
+  }
+
+  input {
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    width: 400px;
+    display: block;
+    margin-top: 8px;
+    justify-content: space-between;
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .menu-lateral {
+    background-color: #4daf00;
+    width: 30%;
+    height: 100vh;
+  }
+
+  label {
+    color: white;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 2rem;
+  }
+
+  .btnCadastrar {
+    margin-top: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+    height: 40px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  li a {
     text-decoration: none;
     list-style-type: none;
     color: white;
     cursor: pointer;
-}
+    font-size: 25px;
+  }
 
+  h4 {
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+  }
 
+  #mensagem_usuario {
+    margin-left: 5px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white bold;
+  }
 
-/*ÁREA DE FORMULÁRIO*/
-
-.container-pratos span{
+  .container-pratos span {
     display: block;
     margin-top: 15px;
     margin-bottom: 15px;
     color: white;
     text-transform: uppercase;
-    font-size: 20px;
-}
+    font-size: 40px;
+  }
 
-label{
-    color: white;
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 1rem; /*equivale a 16px*/
-}
-
-.btnCadastrar{
-    margin-top: 25px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: all .4s ease-in-out;
-    height: 30px;
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-button, input{
+  select {
     border-radius: 5px;
     border: none;
-    height: 25px;
-    width: 250px;
+    height: 35px;
+    width: 300px;
     display: block;
     margin-top: 8px;
     justify-content: space-between;
-}
-
-button:hover{
-    background-color: rgb(196, 255, 196);
-}
-
-button{
-    margin-bottom: 25px; /*Para dar distância da mensagem de validação do button*/
-}
-
-input:focus{
-    outline: none;
-}
-
-input{
-    padding-left: 8px;
-}
-
-select {
-    border-radius: 5px;
-    border: none;
-    height: 25px;
-    width: 250px;
-    display: block;
-    margin-top: 8px;
-    justify-content: space-between;
-    padding-left: 10px;    
-}
-
-select:focus{
-    outline: none;
-}
-
-.container-pratos{
-   height: 100%;
-   width: 100%; 
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background-color: #ffffffee;
-}
-
-
-.formulario-pratos{
-    background-color: #4DAF00;
-    width: 70%;
-    height: 70%;
-    border-radius: 15px;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.422); 
-}
-
-
-/*NOME DO USUÁRIO (RESTAURANTE) LOGADO*/
-#mensagem_usuario{
-    margin-left: 5px;
-    font-size: 15px;
-    text-transform: uppercase;
-    color: white bold;
-}
-
-
-.borda{
-    padding: 10px 5px 10px 5px;
-    border-radius: 5px;
-}
-
-.borda:hover{
-    background-color: #EDEDED ;
-    color: #4DAF00;
-}
-
-
-/*POP-UP DE CADASTRO REALIZADO COM SUCESSO*/
-.alerta_erro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-  }
-  
-  .card_erro {
-    display: none;
-    background-color: #fff;
-    color: black;
-    width: 230px;
-    position: fixed;
-    border-radius: 4px;
-    border: green 3px solid;
-    padding: 10px;
-    margin-right: 10%;
-  }
-  
-.card_erro #mensagem_erro{
-    font-weight: 500;
-    font-size: 20px;
-    color: #4DAF00;
+    /* padding-left: 10px; */
+    font-size: 25px;
   }
 
-  @media (max-width: 850px) {
-    .formulario-pratos {
-        background-color: #4DAF00;
-        width: 90%;
-        height: 50%;
-        border-radius: 15px;  
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.422); 
-    }
-
-    input {
-        border-radius: 5px;
-        border: none;
-        height: 35px;
-        width: 400px;
-        display: block;
-        margin-top: 8px;
-        justify-content: space-between;
-        font-size: 25px;
-    }
-
-    p {
-        font-size: 35px;
-        text-align: center;
-    }
-
-    .menu-lateral {
-        background-color: #4DAF00;
-        width: 30%;
-        height: 100vh;
-    }
-
-    label {
-        color: white;
-        display: inline-block;
-        margin-top: 10px;
-        font-size: 2rem;
-    }
-    
-    .btnCadastrar {
-        margin-top: 25px;
-        cursor: pointer;
-        text-transform: uppercase;
-        transition: all .4s ease-in-out;
-        height: 40px;
-        width: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    li a {
-        text-decoration: none;
-        list-style-type: none;
-        color: white;
-        cursor: pointer;
-        font-size: 25px;
-    }
-
-    h4 {
-        margin: 25px;
-        display: flex;
-        justify-content: center;
-        color: white;
-        font-size: 30px;
-    }
-
-    #mensagem_usuario {
-        margin-left: 5px;
-        font-size: 30px;
-        text-transform: uppercase;
-        color: white bold;
-    }
-
-    .container-pratos span {
-        display: block;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        color: white;
-        text-transform: uppercase;
-        font-size: 40px;
-    }
-
-    select {
-        border-radius: 5px;
-        border: none;
-        height: 35px;
-        width: 300px;
-        display: block;
-        margin-top: 8px;
-        justify-content: space-between;
-        /* padding-left: 10px; */
-        font-size: 25px;
-    }
-
-    option {
+  option {
     font-weight: normal;
     display: block;
     padding: 0px 2px 1px;
     white-space: nowrap;
     font-size: 13px;
-}
-
+  }
 }

@@ -37,7 +37,19 @@
         <div class="mensagem">
             <p>Você deve cadastrar seu endereço para ser divulgado em nosso site!</p>
         </div>
-    
+
+        <div>
+            <button onclick="abrirMeuModalEnderecos(), listarEnderecos()" class="enderecos" data-toggle="modal" data-target="#enderecosModal">Endereços</button>
+        </div>
+
+        
+        <div id="meuModalEnderecos" class="modal" style="display: none;">
+            <div class="conteudo-modal">
+            <ul class="list-group" id="listaEnderecos">
+            </ul>
+            <button onclick="fecharMeuModalEnderecos()" class="botao-modal">X</button>
+         </div>
+        </div>
 
         <div class="alerta_erro">
             <div class="card_erro" id="cardErro">
@@ -78,9 +90,12 @@
             
 
             <!-- Botão de Envio -->
-            <div class="campo">
+            <div class="campo botoes">
                 <button onclick="cadastrar()" class="btnCadastrar">Cadastrar</button>
+                <button onclick="update()" class="btnCadastrar">Alterar</button>
+                <button onclick="deleted()" class="btnCadastrar">Deletar</button>
             </div>
+
         </div>
         <div id="div_mensagem"></div>
         

@@ -22,7 +22,14 @@ function cadastrar(fkCardapio, nomePrato, tipo, preco) {
     return database.executar(instrucao);
 }
 
+function listarPratos(fkCardapio) {
+    var instrucao = ` SELECT * FROM Pratos WHERE fkCardapio = ${fkCardapio};`;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     cadastrar,
-    buscarPratos
+    buscarPratos,
+    listarPratos
 }

@@ -39,7 +39,30 @@ function cadastrar(req, res) {
     }
 }
 
+function listarPratos(req, res) {
+    var fkCardapio = req.params.fkCardapio;
+
+    if (fkCardapio == undefined) {
+        res.status(400).send("O fkCardapio está indefinido!");
+    } else {
+        pratosModel.listarPratos(fkCardapio)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            )
+            .catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log("Houve um erro ao realizar o post: ", erro.sqlMessage);
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
     cadastrar,
-    buscarPratos
+    buscarPratos,
+    listarPratos
 }

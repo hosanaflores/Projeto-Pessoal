@@ -7,4 +7,12 @@ router.post("/cadastrar/:fkRestaurante", function (req, res) { //CADASTRANDO COM
    enderecoController.cadastrar(req, res);
 });
 
+router.put("/alterar/:fkRestaurante", function(req, res){
+   enderecoController.alterar(req, res);
+});
+
+router.get("/listar/:fkRestaurante", function(req, res){
+   enderecoController.listar(req, res);
+});
+
 module.exports = router;
