@@ -10,6 +10,9 @@
     <script src="../js/dashboard-sessao.js"></script>
     <script src="../js/validacaoCep.js"></script>
     <script src="../js/endereco-sessao.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
 </head>
 <body onload="validarSessao()">
@@ -87,13 +90,12 @@
                 <label for="estado">Estado</label>
                 <input type="text" id="uf" name="estado" placeholder="SP" maxlength="15" required>
             </div>
-            
 
             <!-- Botão de Envio -->
-            <div class="campo botoes">
+            <div class="campo">
                 <button onclick="cadastrar()" class="btnCadastrar">Cadastrar</button>
-                <button onclick="update()" class="btnCadastrar">Alterar</button>
-                <button onclick="deleted()" class="btnCadastrar">Deletar</button>
+                <!-- <button onclick="update()" class="btnCadastrar">Alterar</button>
+                <button onclick="deleted()" class="btnCadastrar">Deletar</button> -->
             </div>
 
         </div>

@@ -53,9 +53,7 @@ function listarPratos() {
       headers: {
           "Content-Type": "application/json"
       },
-   
   })
-
   .then(function (resposta) { //CARD DE REDIRECIONAMENTO
       console.log("resposta: ", resposta);
 
@@ -65,7 +63,20 @@ function listarPratos() {
           listaPratos.innerHTML = "";
           resposta.forEach(element => {
             listaPratos.innerHTML += `
-            <li class="list-group-item">${element.nomePrato}</li>`
+             <li class="list-group-item">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Pratos</h5>
+                                <p class="card-text"><strong>CEP:</strong> ${element.nomePrato}</p>
+                                <p class="card-text"><strong>Rua:</strong> ${element.preco}</p>
+                                  <p class="card-text"><strong>Tipo:</strong> ${element.tipo}</p>
+                                  <div class="botoes">
+                                   <button onclick="update(${element.id})" class="btnUpdateModal">Editar</button>
+                                   <button onclick="deleted(${element.id})" class="btnDeleteModal">Deletar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>`
           });
         })
   
@@ -81,6 +92,51 @@ function listarPratos() {
   return false;
 }
 
+
+function update(id) {
+  Swal.fire({
+      title: 'Tem certeza?',
+      text: "Você não poderá reverter isso!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sim, deletar!',
+      cancelButtonText: 'Cancelar',
+      customClass: {
+        confirmButton: 'my-confirm-button',
+        cancelButton: 'my-cancel-button'
+    },
+      backdrop: false
+  }).then((result) => {
+      if (result.isConfirmed) {
+          deletar(id);
+      }
+  });
+}
+
+function deleted(id) {
+  Swal.fire({
+      title: 'Tem certeza?',
+      text: "Você não poderá reverter isso!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sim, deletar!',
+      cancelButtonText: 'Cancelar',
+      customClass: {
+        confirmButton: 'my-confirm-button',
+        cancelButton: 'my-cancel-button'
+    },
+    backdrop: false
+  }).then((result) => {
+
+      if (result.isConfirmed) {
+          deletar(id);
+      }
+  });
+}
 
   function abrirMeuModalPratos() {
     document.getElementById("meuModalPratos").style.display = "flex";

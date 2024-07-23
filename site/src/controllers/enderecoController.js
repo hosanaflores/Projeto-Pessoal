@@ -98,8 +98,34 @@ function alterar (req, res){
     }
 }
 
+
+
+function deletar (req, res){
+    var id = req.params.id;
+
+    if (id == undefined) {
+        res.status(400).send("O id está indefinido!");
+    } else {
+        enderecoModel.deletar(id)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            )
+            .catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log("Houve um erro ao realizar o post: ", erro.sqlMessage);
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
+
 module.exports = {
     cadastrar, 
     listar,
-    alterar
+    alterar, 
+    deletar
 }

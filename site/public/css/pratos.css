@@ -88,6 +88,12 @@ label {
   font-size: 1rem; /*equivale a 16px*/
 }
 
+.my-confirm-button, .my-cancel-button { /*botão deletar do listar endereços (sweet alert)*/
+  height: 40px !important; 
+  padding: 10px 20px;
+  font-size: 16px; 
+}
+
 .btnCadastrar {
   margin-top: 25px;
   cursor: pointer;
@@ -98,6 +104,54 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btnDeleteModal {
+  margin-top: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+  height: 30px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cf0000;
+  font-weight: bold;
+  color: #ededed;
+}
+
+.btnDeleteModal:hover {
+  background-color: rgb(164, 0, 0);
+  font-weight: bold;
+  color: #ededed;
+}
+
+.btnUpdateModal {
+  margin-top: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+  height: 30px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4922f9;
+  font-weight: bold;
+  color: #ededed;
+}
+
+.btnUpdateModal:hover {
+  background-color: rgb(0, 14, 216);
+  font-weight: bold;
+  color: #ededed;
+}
+
+
+.botoes {
+  display: flex;
+  gap: 5px;
 }
 
 button,
@@ -143,48 +197,53 @@ select:focus {
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    z-index: 99;
-  }
-  
-  .conteudo-modal {
-      background: #ededed;
-      padding: 20px;
-      border-radius: 5px;
-      width: 80%;
-      height: 80%;
-      position: relative;
-      overflow-y: auto
-    }
-  
-  .botao-modal {
-      position: absolute;
-      width: 25px;
-      background-color: #4daf00;
-      color: white;
-      right: 0;
-      top: 0;
-      margin-top: 0px;
-    }
-    
-    .botao-modal:hover {
-      background-color: #3b8800;
-    }
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 99;
+}
 
+.conteudo-modal {
+  background: #ededed;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  overflow-y: auto;
+}
 
-  .botoes {
-      display: flex;
-      gap: 5px;
-    }
+.card-body {  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.botao-modal {
+  position: absolute;
+  width: 25px;
+  background-color: #4daf00;
+  color: white;
+  right: 0;
+  top: 0;
+  margin-top: 0px;
+}
+
+.botao-modal:hover {
+  background-color: #3b8800;
+}
+
+.botoes {
+  display: flex;
+  gap: 5px;
+}
 
 .container-pratos {
   height: 100%;
@@ -307,7 +366,8 @@ select:focus {
     font-size: 2rem;
   }
 
-  .btnCadastrar {
+
+.btnCadastrar {
     margin-top: 25px;
     cursor: pointer;
     text-transform: uppercase;
@@ -319,7 +379,7 @@ select:focus {
     align-items: center;
     font-size: 20px;
     font-weight: bold;
-  }
+  }  
 
   li a {
     text-decoration: none;

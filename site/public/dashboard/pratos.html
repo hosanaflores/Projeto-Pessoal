@@ -6,8 +6,13 @@
     <title>Cardapio</title>
 
     <link rel="stylesheet" href="../css/pratos.css">
+
     <script src="../js/pratos-sessao.js"></script>
     <script src="../js/dashboard-sessao.js"></script> <!--VALIDAÇÃO DA SESSÃO-->
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
 </head>
 <body onload="validarSessao()">
@@ -28,8 +33,6 @@
             </ul>
         </div>
     </div>
-
-    
 
    <!--FORMULÁRIO-->
     <div class="container-pratos">
@@ -84,8 +87,8 @@
             <!-- Botão de Envio -->
             <div class="campo botoes">
                 <button onclick="cadastrar()" class="btnCadastrar">Cadastrar</button>
-                <button onclick="update()" class="btnCadastrar">Alterar</button>
-                <button onclick="deleted()" class="btnCadastrar">Deletar</button>
+                <!-- <button onclick="update()" class="btnCadastrar">Alterar</button>
+                <button onclick="deleted()" class="btnCadastrar">Deletar</button> -->
             </div>
         </div>
         
